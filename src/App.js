@@ -22,15 +22,7 @@ function App() {
 		</Routes>
 			<Footer/>
 		</BrowserRouter>
-		// <>
-		// 	<Navbar />
-		// 	<Apartments />
-		// 	<Works />
-		// 	<Services />
-		// 	<Agents />
-		// 	<Adverts />
-		// 	<Footer />
-		// </>
+		
 	);
 }
 
