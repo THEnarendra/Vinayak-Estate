@@ -1,55 +1,69 @@
 nav {
-	position: sticky;
-	top: 0;
-	height: 100px;
+	height: 70px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	z-index: 9999;
 	padding: 0 4rem;
-	background-color: #fff;
-	/* overflow-x: hidden; */
+	background: rgba(228, 234, 246, 0.429);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	position: fixed;
+	top: 0;
+	color: white;
 }
+
 .nav-links {
 	display: flex;
 	flex-direction: row;
 }
+
 .logo a {
 	text-decoration: none;
 	color: var(--textColor);
 	font-size: 1.5rem;
-	font-weight: 600;
+	font-weight: 500;
 }
+
 .nav-link a {
 	text-decoration: none;
-    font-size: 1.1rem;
+	font-size: 1.1rem;
 	padding-right: 3rem;
 	color: var(--textColor);
-	font-weight: 600;
+	font-weight: 400;
 }
+
 .action-links a:hover,
 .nav-link a:hover {
 	color: var(--primaryColor);
 	cursor: pointer;
 }
+
 .action-links a {
 	text-decoration: none;
 	padding-right: 1rem;
 	color: var(--textColor);
 }
+
 .action-links button {
-	background-color: var(--primaryColor);
+	background: rgba(146, 171, 234, 0.362);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid white;
 	padding: 15px 40px;
-	border: none;
 	border-radius: 10px;
+	transition: all 0.3s ease-in-out;
 }
+
 .action-links button:hover {
 	cursor: pointer;
-	border: 1px solid var(--primaryColor);
-	background: transparent;
-	transition: var(--mainTransition);
+	transform: scale(1.1);
 }
+
 .toggler {
 	position: absolute;
 	z-index: 9999;
@@ -59,6 +73,7 @@ nav {
 	transition: var(--transitionAll);
 	visibility: hidden;
 }
+
 .btn-line {
 	width: 40px;
 	height: 4px;
@@ -66,12 +81,15 @@ nav {
 	background: var(--textColor);
 	transition: var(--mainTransition);
 }
+
 .close .btn-line:nth-child(1) {
 	transform: rotate(45deg) translate(5px, 5px);
 }
+
 .close .btn-line:nth-child(2) {
 	opacity: 0;
 }
+
 .close .btn-line:nth-child(3) {
 	transform: rotate(-45deg) translate(7px, -8px);
 }

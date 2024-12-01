@@ -24,17 +24,13 @@ export default function Apartments() {
 						/>
 					))}
 				</div>
-			</div>
 			<div className="apartment-footer">
-				<div className="search-location">
-					<input type="text" placeholder="Search Location " />
-					<button>Search</button>
-				</div>
 				<div  className="viewButton">
 					<button className="apartment-btn">
 						View All Apartments
 					</button>
 				</div>
+			</div>
 			</div>
 		</div>
 	);

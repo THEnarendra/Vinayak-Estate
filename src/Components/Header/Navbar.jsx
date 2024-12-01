@@ -59,8 +59,7 @@ export default function Navbar() {
 				</div>
 			</div>
 			<div className={menu ? "action-links" : "action-links action"}>
-				<a href="#!">Join Us</a>
-				<button>Get Started</button>
+				<button>Get Started With Us</button>
 			</div>
 			<div
 				className={menu ? "toggler" : "toggler close"}

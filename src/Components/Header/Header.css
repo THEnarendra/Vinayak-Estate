@@ -13,7 +13,7 @@
 	height: 100%;
 }
 .cta p {
-	font-size: 4rem;
+	font-size: 3.3rem;
 	font-weight: 500;
 }
 .landing-image {
@@ -31,7 +31,13 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	background-color: var(--primaryColor);
+	background: rgba(57, 104, 222, 0.819);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.207);
+	padding: 15px 40px;
+	transition: all 0.3s ease-in-out;
 }
 .contact-info > div p {
 	font-size: 1.5rem;
@@ -56,7 +62,14 @@
 }
 .search-bar button {
 	width: 20%;
-	background: var(--primaryColor);
-	border: none;
 	border-radius: 0 25px 25px 0;
+	background: rgba(57, 104, 222, 0.819);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.207);
+	padding: 15px 40px;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	color: white;
 }

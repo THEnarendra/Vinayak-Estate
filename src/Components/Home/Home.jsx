@@ -1,15 +1,16 @@
 import React from 'react'
-import Navbar from '../Header/Navbar'
 import Header from '../Header/Header'
 import Apartments from '../Apartments/Apartments'
 import BuilderSlider from '../Builder Section/BuilderSection'
 
 const Home = () => {
   return (
-    <div>
+    <div className='homeSection'>
       <Header/>
       <Apartments/>
+      <div className='carousel'>
       <BuilderSlider/>
+      </div>
     </div>
   )
 }
