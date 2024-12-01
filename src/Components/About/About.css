@@ -1,0 +1,49 @@
+.about {
+	margin: 7rem 4rem;
+	display: flex;
+	justify-content: space-around;
+}
+.company {
+	width: 50%;
+}
+.company .heading {
+	font-size: 4rem;
+	padding-bottom: 2rem;
+}
+.company p {
+	font-size: 1.3rem;
+}
+.stats {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	grid-gap: 1rem;
+	width: 50%;
+}
+.apartments,
+.awards,
+.clients,
+.employees {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: var(--mainBack);
+	width: 250px;
+	height: 250px;
+}
+.apartments span,
+.awards span,
+.clients span,
+.employees span {
+	color: var(--primaryColor);
+	font-size: 3rem;
+	font-weight: bold;
+}
+.apartments p,
+.awards p,
+.employees p,
+.clients p {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
