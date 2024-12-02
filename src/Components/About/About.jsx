@@ -1,8 +1,10 @@
 import React from 'react';
 import './About.css'
+import Agents from '../Agents/Agents';
 
 const About = () => {
   return (
+	<>
 	  <div className="about" id="about">
 			<div className="company">
 				<p className="heading">Our Company's Statistics</p>
@@ -49,6 +51,9 @@ const About = () => {
 				</div>
 			</div>
 		</div>
+
+		<div><Agents/></div>
+		</>
   )
 }
 

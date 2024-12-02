@@ -18,20 +18,7 @@ const Header = () => {
 		<div className="landing-image">
 			<img src={landingImage} alt="" />
 		</div>
-		<div className="contact-info">
-			<div className="phone">
-				<p>
-					<i class="fa fa-phone" aria-hidden="true"></i>{" "}
-					<span>(+254)7 2496 6748</span>
-				</p>
-			</div>
-			<div>
-				<p>
-					<i class="fa fa-map-marker" aria-hidden="true"></i>{" "}
-					<span>Nairobi, Kenya</span>
-				</p>
-			</div>
-		</div>
+
 	</div>
 </>
   )

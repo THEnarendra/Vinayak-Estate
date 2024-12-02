@@ -7,8 +7,9 @@ const Home = () => {
   return (
     <div className='homeSection'>
       <Header/>
-      <Apartments/>
       <div className='carousel'>
+      <h2 style={{ textAlign: "center", fontSize: "2rem"}}>Spotlight Projects</h2>
+
       <BuilderSlider/>
       </div>
     </div>

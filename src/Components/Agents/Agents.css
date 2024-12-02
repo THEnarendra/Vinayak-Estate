@@ -1,0 +1,36 @@
+.agents-container {
+	margin: 4rem 4rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: center;
+	grid-gap: 1rem;
+}
+.agent {
+	width: 400px;
+	box-shadow: var(--mainShadow);
+}
+.agent-img img {
+	width: 100%;
+}
+.agent-details {
+	padding: 2rem 0;
+	display: flex;
+	justify-content: space-between;
+}
+.agent-title {
+	color: var(--primaryColor);
+	padding: 1rem 1rem;
+	font-size: 1.4rem;
+}
+.agent-name {
+	padding: 1rem 1rem;
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+.socials {
+	display: flex;
+	align-items: center;
+}
+.socials i {
+	padding: 0 1rem;
+}

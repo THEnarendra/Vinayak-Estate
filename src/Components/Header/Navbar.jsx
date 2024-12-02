@@ -59,7 +59,7 @@ export default function Navbar() {
 				</div>
 			</div>
 			<div className={menu ? "action-links" : "action-links action"}>
-				<button>Get Started With Us</button>
+				<button>Enquire Now</button>
 			</div>
 			<div
 				className={menu ? "toggler" : "toggler close"}

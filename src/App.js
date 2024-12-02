@@ -5,6 +5,7 @@ import Footer from "./Components/Footer/Footer";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
+import Apartments from "./Components/Apartments/Apartments";
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<Route path="/" element={<Home/>}/>
 			<Route path="/aboutus" element={<About/>}/>
 			<Route path="/services" element={<Services/>}/>
+			<Route path="/apartments" element={<Apartments/>}/>
 		</Routes>
 			<Footer/>
 		</BrowserRouter>

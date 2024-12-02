@@ -1,76 +1,70 @@
-.builder-slider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    background: #f8f9fa;
-    border-radius: 10px;
-  }
-  
-  .builder-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%);
-    padding: 1.5rem;
-    border-radius: 10px;
-  }
-  
-  .builder-logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-  }
-  
-  .builder-info h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  .builder-info p {
-    margin: 0;
-    color: #555;
-  }
-  
-  .view-projects {
-    margin-top: 1rem;
-    color: #6c63ff;
-    text-decoration: none;
-  }
-  
-  .project-slider {
-    margin-top: 2rem;
-    width: 80%;
-  }
-  
-  .project-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-  }
-  
-  .project-info h4 {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .project-info p {
-    margin: 0;
-    color: #666;
-  }
-  
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.gradient-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%; /* Reduced width */
+  height: 100%;
+  background: linear-gradient(to right, #f2e9f7, #fff);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the container */
+}
+
+.content {
+  flex: 1;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.builder-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.property-type,
+.property-location,
+.property-price {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.contact-btn {
+  margin-top: 20px;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #4e00b7;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.property-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}

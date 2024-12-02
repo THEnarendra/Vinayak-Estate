@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Agent from "./Agent";
 import agents from "../../Data/AgentsData";
+import './Agents.css'
 
 export default function Agents() {
 	const [allAgents] = useState(agents);
@@ -8,7 +9,7 @@ export default function Agents() {
 	return (
 		<div className="agents" id="agents">
 			<div className="agents-intro">
-				<p className="agents-heading">Meet Our Agents</p>
+				<p className="agents-heading">Meet Our Team</p>
 				<p className="agents-text">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
 					nemo unde quia recusandae explicabo possimus, tempora

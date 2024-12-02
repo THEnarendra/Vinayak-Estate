@@ -1,46 +1,50 @@
-// RealEstateCarousel.js
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
+import './BuilderSection.css';
+import PropertyPopup from '../Popup/PropertyPopup'; // Import the popup component
 
 const CarouselContainer = styled.div`
-  width: 100%;
+  width: 90%;
   margin: auto;
-
-  .slick-slide img {
-    display: block;
-    margin: auto;
-    border-radius: 10px;
-  }
+  padding: 20px;
 `;
 
-const realEstateData = [
+const buildersData = [
   {
     id: 1,
-    image: 'https://via.placeholder.com/800x400?text=Property+1',
-    title: 'Luxury Apartment',
-    location: 'New York, NY',
-    price: '$1,500,000',
+    image: 'https://via.placeholder.com/800x400?text=Kedia+Real+Estate',
+    builderName: 'Kedia Real Estate',
+    location: 'Vaishali Nagar, Jaipur',
+    price: '₹59.0L - ₹82.0L',
+    type: '3 BHK Villa',
   },
   {
     id: 2,
-    image: 'https://via.placeholder.com/800x400?text=Property+2',
-    title: 'Beachfront Villa',
-    location: 'Miami, FL',
-    price: '$2,800,000',
-  },
-  {
-    id: 3,
-    image: 'https://via.placeholder.com/800x400?text=Property+3',
-    title: 'Modern Loft',
-    location: 'San Francisco, CA',
-    price: '$950,000',
+    image: 'https://via.placeholder.com/800x400?text=Ganga+Kotecha',
+    builderName: 'Ganga Kotecha',
+    location: 'Mansarovar, Jaipur',
+    price: '₹44.28L - ₹65.97L',
+    type: '2, 3 BHK Apartments',
   },
 ];
 
-const RealEstateCarousel = () => {
+const BuilderSection = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false); // State to track popup visibility
+  const [selectedBuilder, setSelectedBuilder] = useState(null); // State to track selected builder details
+
+  const openPopup = (builder) => {
+    setSelectedBuilder(builder); // Set the builder details
+    setIsPopupOpen(true); // Open the popup
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false); // Close the popup
+    setSelectedBuilder(null); // Clear the selected builder
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -50,24 +54,55 @@ const RealEstateCarousel = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
+    arrows: true,
   };
 
   return (
-    <CarouselContainer>
-      <Slider {...settings}>
-        {realEstateData.map((property) => (
-          <div key={property.id}>
-            <img src={property.image} alt={property.title} />
-            <div style={{ textAlign: 'center', marginTop: '10px' }}>
-              <h3>{property.title}</h3>
-              <p>{property.location}</p>
-              <strong>{property.price}</strong>
+    <>
+      <CarouselContainer>
+        <Slider {...settings}>
+          {buildersData.map((builder) => (
+            <div className="carousel-item" key={builder.id}>
+              <div className="gradient-container">
+                {/* Left Content */}
+                <div className="content">
+                  <h3 className="builder-name">{builder.builderName}</h3>
+                  <p className="property-type">{builder.type}</p>
+                  <p className="property-location">{builder.location}</p>
+                  <strong className="property-price">{builder.price}</strong>
+                  <button
+                    className="contact-btn"
+                    onClick={() => openPopup(builder)} // Open popup with builder details
+                  >
+                    Contact
+                  </button>
+                </div>
+                {/* Right Image */}
+                <div className="image-container">
+                  <img
+                    src={builder.image}
+                    alt={builder.builderName}
+                    className="property-image"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-    </CarouselContainer>
+          ))}
+        </Slider>
+      </CarouselContainer>
+
+      {/* Popup Component */}
+      {isPopupOpen && selectedBuilder && (
+        <PropertyPopup
+          isOpen={isPopupOpen}
+          onClose={closePopup}
+          image={selectedBuilder.image}
+          name={selectedBuilder.builderName}
+          price={selectedBuilder.price}
+        />
+      )}
+    </>
   );
 };
 
-export default RealEstateCarousel;
+export default BuilderSection;
