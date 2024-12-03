@@ -44,14 +44,6 @@ export default function Navbar() {
 				</div>
 				<div className="nav-link">
 					<Link
-						to="/agents"
-						onClick={() => showMenu()}
-					>
-						Our Team
-					</Link>
-				</div>
-				<div className="nav-link">
-					<Link
 						to="/services"
 					>
 						Our Services

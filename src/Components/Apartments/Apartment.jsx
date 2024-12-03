@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Col, Button, Card } from 'react-bootstrap';
-import './Apartment.css'; // Import the separate CSS file
+import './Apartment.css';
 
-const ApartmentCard = ({ image, title, price, bathrooms, bedrooms }) => {
+const Apartment = ({ image, title, price, bathrooms, bedrooms }) => {
   return (
     <Card className="apartment-card">
       <Row className="g-0">
@@ -48,4 +48,4 @@ const ApartmentCard = ({ image, title, price, bathrooms, bedrooms }) => {
   );
 };
 
-export default ApartmentCard;
+export default Apartment;

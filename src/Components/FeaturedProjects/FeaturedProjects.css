@@ -1,0 +1,32 @@
+.featured-collections {
+    padding: 40px 20px;
+  }
+  
+  .collection-card {
+    padding: 10px;
+  }
+  
+  .slick-arrow {
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slick-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .slick-dots li button:before {
+    color: #000;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #000;
+  }
+  
