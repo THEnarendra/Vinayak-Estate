@@ -1,8 +1,11 @@
 import React from 'react';
 import { Row, Col, Button, Card } from 'react-bootstrap';
 import './Apartment.css';
+import { useNavigate } from 'react-router-dom';
 
 const Apartment = ({ image, title, price, bathrooms, bedrooms }) => {
+  const navigate = useNavigate();
+
   return (
     <Card className="apartment-card">
       <Row className="g-0">
@@ -34,9 +37,10 @@ const Apartment = ({ image, title, price, bathrooms, bedrooms }) => {
 
             {/* Buttons */}
             <div className="button-group">
-              <Button variant="primary" className="details-btn">
+              <Button variant="primary" className="details-btn" onClick={() => navigate("/propertydetails")}>
                 More Details
               </Button>
+              
               <Button variant="outline-secondary" className="contact-btn">
                 Contact
               </Button>
