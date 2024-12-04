@@ -20,6 +20,7 @@
   
   .apartment-image {
 	position: relative;
+  cursor: pointer;
   }
   
   .apartment-image .badge {
@@ -32,6 +33,7 @@
   .apartment-details h5 {
 	font-size: 1.2rem;
 	margin-bottom: 10px;
+  cursor: pointer;
   }
   
   .apartment-actions h4 {

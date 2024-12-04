@@ -2,8 +2,11 @@ import React from "react";
 import { Row, Col, Button, Container, Card } from "react-bootstrap";
 import "./Apartments.css"; // For custom styles
 import img from '../../img/Interior Swiper/1.jpg'
+import { useNavigate } from "react-router-dom";
 
 const Apartments = () => {
+  const navigate = useNavigate();
+  
   const apartments = [
     {
       id: 1,
@@ -64,6 +67,10 @@ const Apartments = () => {
     // Add more apartment data
   ];
 
+  const handleNavigate = () => {
+    navigate("/propertyDetails");
+  };
+
   return (
     <Container fluid className="apartments-page">
       {/* Header Section */}
@@ -119,7 +126,7 @@ const Apartments = () => {
             <Card className="apartment-card">
               <Row>
                 {/* Left Side: Image */}
-                <Col md={3} className="apartment-image">
+                <Col md={3} onClick={handleNavigate} className="apartment-image">
                   <div
                     style={{
                       backgroundImage: `url(${apartment.image})`,
@@ -135,7 +142,7 @@ const Apartments = () => {
 
                 {/* Middle: Details */}
                 <Col md={6} className="apartment-details">
-                  <h5>{apartment.title}</h5>
+                  <h5 onClick={handleNavigate}>{apartment.title}</h5>
                   <Row className="my-2">
                     <Col>
                       <p>

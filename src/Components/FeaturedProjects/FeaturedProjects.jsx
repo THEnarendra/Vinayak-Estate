@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import { useNavigate } from "react-router-dom";  // Importing useNavigate from react-router-dom
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./FeaturedProjects.css"; // For custom styling
@@ -9,6 +10,8 @@ import img3 from "../../img/Interior Swiper/3.jpg";
 import img4 from "../../img/Interior Swiper/4.jpg";
 
 const FeaturedProjects = () => {
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
   const collections = [
     {
       title: "Ready to Move-In",
@@ -60,6 +63,11 @@ const FeaturedProjects = () => {
     ],
   };
 
+  const handleCardClick = () => {
+    // Navigate to Apartments page when a card is clicked
+    navigate("/apartments");
+  };
+
   return (
     <div className="featured-collections">
       <h1 className="text-center">Our Collections</h1>
@@ -79,6 +87,7 @@ const FeaturedProjects = () => {
                 position: "relative", // Required for gradient and text
                 transition: "transform 0.3s ease",
               }}
+              onClick={handleCardClick} // Add onClick event to redirect
             >
               {/* Gradient Overlay */}
               <div
