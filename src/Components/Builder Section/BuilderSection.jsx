@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import './BuilderSection.css';
 import PropertyPopup from '../Popup/PropertyPopup';
 import img from '../../img/Interior Swiper/1.jpg'
+import { useNavigate } from 'react-router-dom';
 
 const CarouselContainer = styled.div`
   width: 90%;
@@ -35,6 +36,7 @@ const buildersData = [
 const BuilderSection = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedBuilder, setSelectedBuilder] = useState(null);
+  const navigate = useNavigate();
 
   const openPopup = (builder) => {
     setSelectedBuilder(builder);
@@ -61,11 +63,12 @@ const BuilderSection = () => {
   return (
     <>
       <CarouselContainer>
-        <Slider {...settings}>
+        <Slider {...settings} >
           {buildersData.map((builder) => (
-            <div className="carousel-item" key={builder.id}>
+            <div className="carousel-item" 
+            onClick={()=>navigate("/propertydetails")}
+            key={builder.id}>
               <div className="gradient-container">
-                {/* Left Content */}
                 <div className="content">
                   <h3 className="builder-name">{builder.builderName}</h3>
                   <p className="property-type">{builder.type}</p>

@@ -2,6 +2,7 @@
     height: 65vh;
     width: 26vw;
     margin-left: 22%;
+    cursor: pointer;
 }
 
 .swiperImg{
