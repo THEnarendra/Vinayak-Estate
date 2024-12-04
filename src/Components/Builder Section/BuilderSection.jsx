@@ -4,12 +4,12 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
 import './BuilderSection.css';
-import PropertyPopup from '../Popup/PropertyPopup'; // Import the popup component
+import PropertyPopup from '../Popup/PropertyPopup';
 
 const CarouselContainer = styled.div`
   width: 90%;
   margin: auto;
-  padding: 20px;
+  padding: 40px 20px; /* Increased padding for better spacing */
 `;
 
 const buildersData = [
@@ -32,17 +32,17 @@ const buildersData = [
 ];
 
 const BuilderSection = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false); // State to track popup visibility
-  const [selectedBuilder, setSelectedBuilder] = useState(null); // State to track selected builder details
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedBuilder, setSelectedBuilder] = useState(null);
 
   const openPopup = (builder) => {
-    setSelectedBuilder(builder); // Set the builder details
-    setIsPopupOpen(true); // Open the popup
+    setSelectedBuilder(builder);
+    setIsPopupOpen(true);
   };
 
   const closePopup = () => {
-    setIsPopupOpen(false); // Close the popup
-    setSelectedBuilder(null); // Clear the selected builder
+    setIsPopupOpen(false);
+    setSelectedBuilder(null);
   };
 
   const settings = {
@@ -52,7 +52,7 @@ const BuilderSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     pauseOnHover: true,
     arrows: true,
   };
@@ -72,7 +72,7 @@ const BuilderSection = () => {
                   <strong className="property-price">{builder.price}</strong>
                   <button
                     className="contact-btn"
-                    onClick={() => openPopup(builder)} // Open popup with builder details
+                    onClick={() => openPopup(builder)}
                   >
                     Contact
                   </button>

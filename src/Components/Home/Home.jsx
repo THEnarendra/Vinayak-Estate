@@ -18,7 +18,7 @@ const Home = () => {
 
       {/* Spotlight Projects Section */}
       <div className="carousel">
-        <h2 style={{ marginLeft: '10%', fontSize: '2.5rem' }}>Spotlight Projects</h2>
+        <h2 style={{ marginLeft: '10%', fontSize: '2.5rem' }}>Projects in Spotlight </h2>
         <p style={{ marginLeft: '10%', fontSize: '1rem', color: "gray" }}>our premium projects</p>
 
         <BuilderSlider />

@@ -1,5 +1,5 @@
 .featured-collections {
-    padding: 40px 20px;
+    padding: 40px 80px;
   }
   
   .collection-card {
@@ -28,5 +28,15 @@
   
   .slick-dots li.slick-active button:before {
     color: #000;
+  }
+  
+
+  .collection-card .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .collection-card .card:hover {
+    transform: scale(1.05); /* Increase the card size on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for a 3D effect */
   }
   

@@ -2,11 +2,11 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./FeaturedProjects.css"; // Optional for custom styling
-import img1 from '../../img/Interior Swiper/1.jpg'
-import img2 from '../../img/Interior Swiper/2.jpg'
-import img3 from '../../img/Interior Swiper/3.jpg'
-import img4 from '../../img/Interior Swiper/4.jpg'
+import "./FeaturedProjects.css"; // For custom styling
+import img1 from "../../img/Interior Swiper/1.jpg";
+import img2 from "../../img/Interior Swiper/2.jpg";
+import img3 from "../../img/Interior Swiper/3.jpg";
+import img4 from "../../img/Interior Swiper/4.jpg";
 
 const FeaturedProjects = () => {
   const collections = [
@@ -76,15 +76,35 @@ const FeaturedProjects = () => {
                 borderRadius: "8px",
                 overflow: "hidden",
                 height: "250px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                color: "#fff",
+                position: "relative", // Required for gradient and text
+                transition: "transform 0.3s ease",
               }}
             >
-              <h5 className="mb-2">{collection.title}</h5>
-              <p>{collection.description}</p>
+              {/* Gradient Overlay */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "40%",
+                  background: "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)",
+                }}
+              ></div>
+
+              {/* Text */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: 10,
+                  left: 20,
+                  color: "#fff",
+                  zIndex: 2,
+                }}
+              >
+                <h5 className="mb-1">{collection.title}</h5>
+                <p style={{ fontSize: "0.9rem", margin: 0 }}>{collection.description}</p>
+              </div>
             </div>
           </div>
         ))}
