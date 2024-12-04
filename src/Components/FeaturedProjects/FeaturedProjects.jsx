@@ -62,8 +62,8 @@ const FeaturedProjects = () => {
 
   return (
     <div className="featured-collections">
-      <h2 className="text-center">Featured Collections</h2>
-      <p className="text-center">Handpicked projects for you</p>
+      <h1 className="text-center">Our Collections</h1>
+      <p className="text-center">Designed for You</p>
       <Slider {...sliderSettings} className="mt-4">
         {collections.map((collection, index) => (
           <div key={index} className="collection-card">

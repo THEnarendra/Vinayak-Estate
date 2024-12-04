@@ -75,7 +75,7 @@
 }
 
 .property-image {
-  max-width: 100%;
+  max-width: 90%;
   max-height: 90%; /* Increased image size while maintaining proportions */
   border-radius: 15px;
   object-fit: cover;

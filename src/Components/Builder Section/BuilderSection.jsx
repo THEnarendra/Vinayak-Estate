@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
 import './BuilderSection.css';
 import PropertyPopup from '../Popup/PropertyPopup';
+import img from '../../img/Interior Swiper/1.jpg'
 
 const CarouselContainer = styled.div`
   width: 90%;
@@ -15,7 +16,7 @@ const CarouselContainer = styled.div`
 const buildersData = [
   {
     id: 1,
-    image: 'https://via.placeholder.com/800x400?text=Kedia+Real+Estate',
+    image: img,
     builderName: 'Kedia Real Estate',
     location: 'Vaishali Nagar, Jaipur',
     price: '₹59.0L - ₹82.0L',
@@ -23,7 +24,7 @@ const buildersData = [
   },
   {
     id: 2,
-    image: 'https://via.placeholder.com/800x400?text=Ganga+Kotecha',
+    image: img,
     builderName: 'Ganga Kotecha',
     location: 'Mansarovar, Jaipur',
     price: '₹44.28L - ₹65.97L',
