@@ -73,12 +73,7 @@
 		display: none;
 	}
 	.search-bar {
-		display: flex;
-		width: 150%;
-		height: 40px;
-	}
-	.search-bar input {
-		width: 60%;
+		display: none;
 	}
 	.contact-info {
 		height: 60px;

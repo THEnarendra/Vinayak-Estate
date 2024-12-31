@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import { useNavigate } from "react-router-dom";  // Importing useNavigate from react-router-dom
+import { useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./FeaturedProjects.css"; // For custom styling
+import "./FeaturedProjects.css";
 import img1 from "../../img/Interior Swiper/1.jpg";
 import img2 from "../../img/Interior Swiper/2.jpg";
 import img3 from "../../img/Interior Swiper/3.jpg";
@@ -14,29 +14,24 @@ const FeaturedProjects = () => {
 
   const collections = [
     {
-      title: "Ready to Move-In",
-      description: "Comfortable homes available for immediate use",
+      title: "Lands",
+      description: "Land available for immediate use",
       image: img1,
     },
     {
-      title: "Townships",
-      description: "Redefining community living",
+      title: "Villas",
+      description: "Redefining community living Villas",
       image: img2,
     },
     {
-      title: "Luxury",
+      title: "Farm Houses",
       description: "Premium housing for the lifestyle-conscious",
       image: img3,
     },
     {
-      title: "Beachside",
+      title: "Flats",
       description: "Experience serene beachside living",
       image: img4,
-    },
-    {
-      title: "Urban Living",
-      description: "Convenience and style in city living",
-      image: img1,
     },
   ];
 

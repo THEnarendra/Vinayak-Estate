@@ -19,7 +19,12 @@
     justify-content: center;
     align-items: center;
   }
-  
+  .slick-prev{
+    left: -40px;
+  }
+  .slick-next{
+  right: -40px;
+  } 
   .slick-arrow:hover {
     background: rgba(0, 0, 0, 0.8);
   }

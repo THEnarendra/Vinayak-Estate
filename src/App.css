@@ -36,12 +36,9 @@ body {
 	}
 }
 
-
-/* WORKS STYLING */
 .agents,
-.services,
 .works {
-	margin: 4rem 4rem;
+	margin: 5rem 2rem;
 }
 
 .agents-intro,
@@ -243,10 +240,6 @@ body {
 
 	.services-intro {
 		margin-bottom: 4rem;
-	}
-
-	.services-img img {
-		width: 100%;
 	}
 
 	.agents-container {
