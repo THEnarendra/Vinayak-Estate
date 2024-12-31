@@ -1,6 +1,5 @@
 import React from 'react';
 import './About.css'
-import Agents from '../Agents/Agents';
 
 const About = () => {
   return (

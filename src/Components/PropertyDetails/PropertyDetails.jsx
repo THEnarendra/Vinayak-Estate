@@ -15,83 +15,50 @@ import {
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import propertyData from "../../staticData/propertyData"; // Replace with your data source
+import { useParams } from "react-router-dom";
 
 export default function PropertyDetails() {
-  const { title, location, contact, propertyDetails, price, images } = propertyData;
-  const property = {
-    title: "3 BHK Builder Floor For Sale in Jagatpura, Jaipur",
-    price: "₹85 Lac",
-    emi: "₹38k",
-    image: images[0].url, // Replace with the actual image
-    additionalImages: images,
-    bedrooms: "3 Beds",
-    bathrooms: "2 Baths",
-    balconies: "2 Balconies",
-    furnished: "Semi-Furnished",
-    carpetArea: "1550 sqft",
-    floor: "Ground (Out of 3 Floors)",
-    transactionType: "Resale",
-    status: "Ready to Move",
-    facing: "East",
-    ownership: "Freehold",
-    ageOfConstruction: "New Construction",
-    address:
-      "Ground Floor B 36 37 Vidhya Nagar Jagatpura Jaipur, Jagatpura, Jaipur, Rajasthan",
-    landmarks: "Opposite Jagatpura Railway Flyover",
-    furnishing: "Semi-Furnished",
-    flooring: "Vitrified, Marble",
-    loanOffered: "₹38,336",
-  };
+  const { id, route } = useParams();
+  const apartments = route === "Lands" ? propertyData.VillasData : []
+  const property = apartments.find((property) => property.id === parseInt(id));
 
   return (
     <Container className="propertyDetails-page">
       <Row className="propertyDetails-breadcrumb-row">
         <Col>
           <p className="propertyDetails-breadcrumb">
-            Home Property in Jaipur Builder Floor for Sale in Jagatpura 3 BHK
-            1860 Sqft
+            {property.location.address + ", " + property.location.city + ", " + property.location.state}
           </p>
         </Col>
       </Row>
-
-      {/* Property Header Section */}
-      <Row className="propertyDetails-header">
-        <Col md={8}>
-          <h1 className="propertyDetails-title">{property.title}</h1>
-          <p className="propertyDetails-price">
-            {property.price}{" "}
-            <span className="propertyDetails-emi">EMI - {property.emi}</span>
-          </p>
-        </Col>
+      {/* <Row className="propertyDetails-header">
         <Col md={4} className="text-md-end propertyDetails-contact-owner-box">
           <Button className="propertyDetails-contact-btn">Contact Owner</Button>
           <Button className="propertyDetails-phone-btn">Get Phone No.</Button>
         </Col>
-      </Row>
-
-      {/* Image Grid Section */}
+      </Row> */}
       <Row className="propertyDetails-main-details">
         <Col md={8} className="propertyDetails-image-grid">
-          {/* Large Image */}
           <div className="propertyDetails-large-image">
-            <img
-              src={property.image}
+            {/* <img
+              src={property.images?.[0]}
               alt="Property"
               className="propertyDetails-image"
-            />
+            /> */}
           </div>
-
-          {/* Small Images */}
           <div className="propertyDetails-small-images">
-            {property.additionalImages.map((img, index) => (
+            <Row>
+            {property.images.map((img, index) => (
+              <Col key={index} md={4}>
               <div key={index} className="propertyDetails-small-image">
-                <img src={img.url} alt={`Small ${index + 1}`} />
+                <img src={img} alt={`Small ${index + 1}`} />
               </div>
+              </Col>
             ))}
+            </Row>
           </div>
         </Col>
 
-        {/* Contact Box */}
         <Col md={4}>
           <div className="propertyDetails-contact-box">
             <h5>Contact Owner</h5>
@@ -102,41 +69,11 @@ export default function PropertyDetails() {
           </div>
         </Col>
       </Row>
-
-      {/* More Details Section */}
-      {/* <Row className="propertyDetails-more-details">
+      <Row>
         <Col>
-          <h3>More Details</h3>
+          <h1>{property.title}</h1>
           <p>
-            <strong>Price Breakup:</strong> {property.price}
-          </p>
-          <p>
-            <strong>Address:</strong> {property.address}
-          </p>
-          <p>
-            <strong>Landmarks:</strong> {property.landmarks}
-          </p>
-          <p>
-            <strong>Furnishing:</strong> {property.furnishing}
-          </p>
-          <p>
-            <strong>Flooring:</strong> {property.flooring}
-          </p>
-          <p>
-            <strong>Loan Offered:</strong> Estimated EMI: {property.loanOffered}
-          </p>
-        </Col>
-      </Row> */}
-
-
-
-
-
-<Row>
-        <Col>
-          <h1>{title}</h1>
-          <p>
-            <FontAwesomeIcon icon={faMapMarkerAlt} /> {location.address}, {location.city}
+            <FontAwesomeIcon icon={faMapMarkerAlt} /> {property.location.address}, {property.location.city}
           </p>
           {/* <p>
             Contact: <FontAwesomeIcon icon={faPhoneAlt} /> {contact.phone}
@@ -153,35 +90,35 @@ export default function PropertyDetails() {
       <Row className="details-grid">
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faRulerCombined} />
-          <span>Size: {propertyDetails.size}</span>
+          <span>Size: {property.propertyDetails.size}</span>
         </Col>
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faCompass} />
-          <span>Facing: {propertyDetails.facing}</span>
+          <span>Facing: {property.propertyDetails.facing}</span>
         </Col>
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faBed} />
-          <span>Bedrooms: {propertyDetails.bedrooms}</span>
+          <span>Bedrooms: {property.propertyDetails.bedrooms}</span>
         </Col>
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faChild} />
-          <span>Kids Room: {propertyDetails.kidsRoom}</span>
+          <span>Kids Room: {property.propertyDetails.kidsRoom}</span>
         </Col>
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faBath} />
-          <span>Bathrooms: {propertyDetails.bathrooms}</span>
+          <span>Bathrooms: {property.propertyDetails.bathrooms}</span>
         </Col>
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faHome} />
-          <span>Drawing Room: {propertyDetails.drawingRoom ? "Yes" : "No"}</span>
+          <span>Drawing Room: {property.propertyDetails.drawingRoom ? "Yes" : "No"}</span>
         </Col>
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faCouch} />
-          <span>Furnished: {propertyDetails.features.furnished ? "Yes" : "No"}</span>
+          {/* <span>Furnished: {property.propertyDetails.f? "Yes" : "No"}</span> */}
         </Col>
         <Col xs={12} className="mt-3">
           <p className="price">
-            <strong>Price:</strong> {price}
+            {/* <strong>Price:</strong> {price} */}
           </p>
         </Col>
       </Row>
@@ -192,13 +129,13 @@ export default function PropertyDetails() {
           <h3>Images</h3>
         </Col>
       </Row>
-      <Row>
+      {/* <Row>
         {images.map((image, index) => (
           <Col xs={12} sm={6} md={4} className="image-col mb-3" key={index}>
             <img src={image} alt={`Property Image ${index + 1}`} className="img-fluid" />
           </Col>
         ))}
-      </Row>
+      </Row> */}
 
       {/* Download Brochure */}
       <Row className="mt-4 text-center">

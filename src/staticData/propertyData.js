@@ -95,10 +95,7 @@ const VillasData = [
     },
     askprice: "Contact for price",
     images: [
-      "/images/property1.jpg",
-      "/images/property2.jpg",
-      "/images/property3.jpg",
-      "/images/property4.jpg"
+      
     ]
   }
 ];
@@ -140,10 +137,6 @@ const FlatsData = [
     },
     askprice: "Contact for price",
     images: [
-      "/images/property1.jpg",
-      "/images/property2.jpg",
-      "/images/property3.jpg",
-      "/images/property4.jpg"
     ]
   },
     {
@@ -182,10 +175,7 @@ const FlatsData = [
     },
     askprice: "Contact for price",
     images: [
-      "/images/property1.jpg",
-      "/images/property2.jpg",
-      "/images/property3.jpg",
-      "/images/property4.jpg"
+      
     ]
   }
 ];
@@ -203,7 +193,6 @@ const propertyData = {
     FlatsData,
     LandData,
     FarmHouseData,
-
     SpotlightFlats,
     FocusVillas
 }

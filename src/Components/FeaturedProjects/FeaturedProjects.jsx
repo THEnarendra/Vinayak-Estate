@@ -58,8 +58,8 @@ const FeaturedProjects = () => {
     ],
   };
 
-  const handleCardClick = () => {
-    navigate("/apartments");
+  const handleCardClick = (type) => {
+    navigate(`/apartments/${type}`);
   };
 
   return (
@@ -81,7 +81,7 @@ const FeaturedProjects = () => {
                 position: "relative", 
                 transition: "transform 0.3s ease",
               }}
-              onClick={handleCardClick}
+              onClick={()=>handleCardClick(collection.title)}
             >
               <div
                 style={{
