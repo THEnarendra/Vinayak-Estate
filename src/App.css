@@ -7,21 +7,33 @@
 	--font-heading: 'Poppins', sans-serif;
 	--font-body: 'Roboto', sans-serif;
 }
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+
 html,
 body {
 	overflow-x: hidden;
-	h1, h2, h3, h4, h5, h6 {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		font-family: var(--font-heading);
-	  }
-	  
-	  body, p, span, a, li {
+	}
+
+	body,
+	p,
+	span,
+	a,
+	li {
 		font-family: var(--font-body);
-	  }
+	}
 }
 
 
@@ -31,18 +43,21 @@ body {
 .works {
 	margin: 4rem 4rem;
 }
+
 .agents-intro,
 .services-intro,
 .works-intro {
 	width: 40%;
 	padding: 2rem 0;
 }
+
 .agents-text,
 .services-text,
 .works-text {
 	line-height: 1.5rem;
 	letter-spacing: 1px;
 }
+
 .agents-heading,
 .services-heading,
 .works-heading {
@@ -50,9 +65,11 @@ body {
 	font-weight: 500;
 	padding-bottom: 2rem;
 }
+
 .works-cards {
 	display: flex;
 }
+
 .works-cards .card {
 	position: relative;
 	z-index: 1000;
@@ -64,11 +81,13 @@ body {
 	padding: 1rem;
 	height: 500px;
 }
+
 .works-cards .card:hover {
 	background: var(--primaryColor);
 	transition: var(--mainTransition);
 	cursor: pointer;
 }
+
 .works-cards .card h1 {
 	position: relative;
 	font-size: 7rem;
@@ -76,29 +95,35 @@ body {
 	top: -6rem;
 	left: -3rem;
 }
+
 .instructions {
 	margin-top: -10rem;
 	font-size: 2rem;
 	font-weight: 500;
 }
+
 .work-text {
 	margin-top: -2rem;
 	text-align: center;
 	line-height: 25px;
 }
+
 .works-cards a {
 	color: var(--textColor);
 }
-/* END WORKS STYLING */
-.homeSection{
-margin-top: 70px;
+
+.homeSection {
+	margin: 10vh 5vw;
 }
 
+.carousel h1 span {
+	color: #6200ea;
+}
 
-/* ADVERTISEMENTS STYLING */
 .ads-container {
 	margin: 4rem 4rem;
 }
+
 .advert {
 	display: flex;
 	align-items: center;
@@ -106,15 +131,18 @@ margin-top: 70px;
 	margin: 2rem 0;
 	height: 500px;
 }
+
 .advert:nth-child(2n) {
 	display: flex;
 	flex-direction: row-reverse;
 	text-align: right;
 }
+
 .advert:nth-child(2n) .text,
 .advert:nth-child(2n) .advertTitle {
 	padding-right: 4rem;
 }
+
 .adImage {
 	display: flex;
 	flex-direction: column;
@@ -122,14 +150,17 @@ margin-top: 70px;
 	width: 50%;
 	height: 400px;
 }
+
 .advert-details {
 	width: 50%;
 }
+
 .adImage img {
 	padding-right: 4rem;
 	width: 100%;
 	height: 100%;
 }
+
 .apartment-location {
 	position: relative;
 	bottom: 3rem;
@@ -139,18 +170,22 @@ margin-top: 70px;
 	padding: 2rem;
 	font-size: 1.5rem;
 }
+
 .apartment-location i {
 	color: #fff;
 	font-size: 2rem;
 	padding-right: 1.2rem;
 }
+
 .advertTitle {
 	font-size: 2.5rem;
 	margin: -4rem 0 3rem 0;
 }
+
 .text {
 	line-height: 25px;
 }
+
 /* END ADVERTISEMENTS STYLING */
 
 .search-bar button {
@@ -163,33 +198,21 @@ margin-top: 70px;
 	border-radius: 10px;
 	transition: all 0.3s ease-in-out;
 }
-.contact-info{
-	color: white;
-}
+
 @media only screen and (max-width: 1200px) {
 
 
 	.cta p {
 		font-size: 3rem;
 	}
-	.contact-info {
-		display: flex;
-		flex-direction: column;
-	}
-	.contact-info > div p {
-		font-size: 1rem;
-	}
-	.contact-info > div i {
-		color: #fff;
-		font-size: 1.3rem;
-		padding-right: 10px;
-	}
+
 	/* apartment responsive design */
 	.main-apartment {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 	}
+
 	.apartment-footer {
 		display: flex;
 		flex-direction: column;
@@ -197,18 +220,22 @@ margin-top: 70px;
 		justify-content: center;
 		width: 100%;
 	}
+
 	.apartment-btn {
 		margin: 0;
 	}
+
 	.works-cards {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
+
 	.works-cards .card {
 		margin: 2rem 0;
 		width: 500px;
 	}
+
 	.works-intro {
 		width: 100%;
 		text-align: center;
@@ -217,37 +244,22 @@ margin-top: 70px;
 	.services-intro {
 		margin-bottom: 4rem;
 	}
+
 	.services-img img {
 		width: 100%;
-		/* padding-right: 2rem; */
 	}
+
 	.agents-container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
+
 	.checkoutBtn {
 		padding: 5px 10px;
 		text-transform: lowercase;
 	}
-	.footer {
-		height: 100%;
-		width: 100%;
-	}
-	.footer header {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.newsletter {
-		margin: 2rem 0;
-	}
-	footer {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		margin: 0;
-	}
+
 	.logo-section {
 		display: flex;
 		justify-content: space-between;
@@ -255,242 +267,8 @@ margin-top: 70px;
 		padding: 2rem 4rem;
 		width: 100%;
 	}
-	.footer-links {
-		width: 100%;
-		margin: 0;
-	}
 }
-.carousel{
+
+.carousel {
 	margin: 3% 0%;
 }
-@media only screen and (max-width: 900px) {
-	/* header responsive design */
-	.header {
-		margin: 0 1rem;
-		padding: 0;
-	}
-	.cta p {
-		font-size: 2.5rem;
-	}
-	.contact-info > div i {
-		display: none;
-	}
-	.search-bar {
-		display: flex;
-		width: 150%;
-		height: 40px;
-	}
-	.search-bar input {
-		width: 60%;
-	}
-	.contact-info {
-		height: 60px;
-	}
-	.search-bar button {
-		width: 40%;
-		color: white;
-	}
-	.landing-image img {
-		width: 100%;
-		height: 100%;
-	}
-	/* end header styling */
-
-	/* about responsive design */
-	.about {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 4rem 0;
-	}
-	.company {
-		width: 100%;
-		padding: 0 1rem;
-	}
-	.company p {
-		text-align: center;
-		font-size: 1.5rem;
-	}
-	.company .heading {
-		font-size: 2rem;
-	}
-	.stats {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		grid-gap: 1rem;
-		align-items: center;
-		margin-top: 2rem;
-	}
-	/* responsive apartments */
-	.apartments-container {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-	}
-	.apartment-list {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		width: 100%;
-	}
-	.apartment-image {
-		width: 70%;
-		height: 70%;
-	}
-	.apartment-heading {
-		padding: 2rem 0;
-		font-size: 2rem;
-		text-align: center;
-	}
-	.single-apartment {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: 90%;
-		margin: 0 auto;
-	}
-	.detail {
-		font-size: 10px;
-		text-transform: lowercase;
-	}
-	.price {
-		padding-right: 10px;
-	}
-	.search-location {
-		width: 180%;
-		height: 40px;
-	}
-	.works-cards .card {
-		width: 100%;
-	}
-	.works {
-		margin: 4rem 1rem;
-	}
-	.numbers {
-		position: absolute;
-		padding-left: 1.3rem;
-		font-size: 4rem !important;
-	}
-	/* responsive services */
-	.services-content {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		height: 100%;
-	}
-	.services-img {
-		width: 100%;
-		margin: 0 2rem;
-		width: 300px;
-		height: 400px;
-	}
-	.services-img img {
-		width: 100%;
-	}
-	.services {
-		margin: 4rem 1rem;
-	}
-	.service {
-		padding: 1rem;
-		height: 100%;
-		width: 100%;
-	}
-	.service-heading {
-		font-size: 2.5rem;
-		padding: 1rem;
-	}
-	/* responsive agents */
-	.agents {
-		margin: 4rem 2rem;
-	}
-	.agents-intro,
-	.services-intro {
-		width: 100%;
-		text-align: left;
-	}
-	.agents-intro {
-		padding: 0;
-		margin: 0;
-	}
-	.agents-container {
-		margin: 4rem 2rem;
-	}
-	.agent {
-		width: 300px;
-		box-shadow: var(--mainShadow);
-	}
-	.agent-details {
-		display: flex;
-		flex-direction: column;
-	}
-	/* responsive adverts */
-	.advert {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-bottom: 10rem;
-	}
-	.advert:nth-child(2n) {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-bottom: 12rem;
-	}
-	.adImage {
-		width: 100%;
-	}
-	.adImage img {
-		padding: 0;
-		width: 100%;
-	}
-	.advert-details {
-		margin: 4rem 0;
-		height: 100%;
-		width: 100%;
-	}
-	.advert:nth-child(2n) .text,
-	.advert:nth-child(2n) .advertTitle {
-		padding: 0;
-	}
-	.advertTitle {
-		color: var(--primaryColor);
-		font-size: 2rem;
-	}
-	.apartment-location {
-		width: 120%;
-		padding: 1rem;
-		font-size: 1rem;
-	}
-	.apartment-location i {
-		font-size: 1rem;
-	}
-	/* responsive footer */
-	.footer {
-		margin-top: 10rem;
-		width: 100%;
-	}
-	.footer-heading {
-		font-size: 2rem;
-		padding-top: 1rem;
-	}
-	.newsletter {
-		width: 100%;
-		height: 50px;
-	}
-	.logo-section,
-	.footer header,
-	.footer-links {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		margin: 0;
-	}
-	.footer-links p {
-		padding-bottom: 0;
-	}
-}
-
-/* END RESPONSIVE DESIGN*/

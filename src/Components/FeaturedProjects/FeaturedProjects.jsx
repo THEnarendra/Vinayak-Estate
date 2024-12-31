@@ -10,7 +10,7 @@ import img3 from "../../img/Interior Swiper/3.jpg";
 import img4 from "../../img/Interior Swiper/4.jpg";
 
 const FeaturedProjects = () => {
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate();
 
   const collections = [
     {
@@ -64,13 +64,12 @@ const FeaturedProjects = () => {
   };
 
   const handleCardClick = () => {
-    // Navigate to Apartments page when a card is clicked
     navigate("/apartments");
   };
 
   return (
     <div className="featured-collections">
-      <h1 className="text-center">Our Collections</h1>
+      <h1 className="text-center">Our <span>Collections</span></h1>
       <p className="text-center">Designed for You</p>
       <Slider {...sliderSettings} className="mt-4">
         {collections.map((collection, index) => (
@@ -84,12 +83,11 @@ const FeaturedProjects = () => {
                 borderRadius: "8px",
                 overflow: "hidden",
                 height: "250px",
-                position: "relative", // Required for gradient and text
+                position: "relative", 
                 transition: "transform 0.3s ease",
               }}
-              onClick={handleCardClick} // Add onClick event to redirect
+              onClick={handleCardClick}
             >
-              {/* Gradient Overlay */}
               <div
                 style={{
                   position: "absolute",
@@ -100,8 +98,6 @@ const FeaturedProjects = () => {
                   background: "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)",
                 }}
               ></div>
-
-              {/* Text */}
               <div
                 style={{
                   position: "absolute",

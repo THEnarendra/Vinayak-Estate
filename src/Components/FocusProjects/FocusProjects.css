@@ -1,117 +1,103 @@
-/* Main Focus Section */
 .focus-section {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.focus-heading h1 .highlight {
+  color: #6200ea;
+}
+
+.focus-heading p {
+  color: #666;
+}
+
+.fcousProject {
+  height: 40vh;
+  overflow-y: scroll;
+  border: 2px solid rgba(128, 128, 128, 0.248);
+  border-radius: 10px;
+  margin: 2% 5%;
+}
+
+.fcousProject::-webkit-scrollbar {
+  width: 10px;
+}
+
+.fcousProject::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.fcousProject::-webkit-scrollbar-thumb {
+  background-color: #6200ea;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.focus-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 400px;
+  border-radius: 10px 0 0 10px;
+}
+
+.card-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.card-subtitle {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.card-details {
+  color: #555;
+  font-size: 1rem;
+}
+
+.card-location {
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.card-price {
+  color: #6200ea;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .focus-card {
+    flex-direction: column;
   }
 
-  .focus-heading{
-    margin-left: 10%;
-  }
-  
-  .focus-heading h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .focus-heading h2 .highlight {
-    color: #6200ea;
-  }
-  
-  .focus-heading p {
-    color: #666;
-    margin-top: 10px;
-    font-size: 1rem;
-  }
-  
-  .fcousProject{
-    height: 40vh;
-    overflow-y: scroll;
-    border: 2px solid rgba(128, 128, 128, 0.248);
-    border-radius: 10px;
-    margin: 2% 5%;
-  }
-  .fcousProject::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  .fcousProject::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-  
-  .fcousProject::-webkit-scrollbar-thumb {
-    background-color: #6200ea;
-    border: 2px solid white;
-    border-radius: 5px;
-  }
-  .focus-card {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
-    margin: 1%;
-  }
-  
-  /* Left Section: Image */
   .card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-width: 400px;
-    border-radius: 10px 0 0 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
   }
-  
-  /* Right Section: Content */
+
   .card-content {
-    padding: 20px;
-    flex: 1;
+    padding: 15px;
   }
-  
-  .card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  .card-subtitle {
-    color: #888;
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-  
-  .card-details {
-    color: #555;
-    font-size: 1rem;
-  }
-  
-  .card-location {
-    color: #888;
-    font-size: 0.9rem;
-    margin-top: 5px;
-  }
-  
-  .card-price {
-    color: #6200ea;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  @media (max-width: 768px) {
-    .focus-card {
-      flex-direction: column;
-    }
-  
-    .card-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px 10px 0 0;
-    }
-  
-    .card-content {
-      padding: 15px;
-    }
-  }
-    
+}

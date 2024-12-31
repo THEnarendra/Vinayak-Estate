@@ -1,17 +1,18 @@
 .carousel-item {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 450px;
   padding-bottom: 35px;
   cursor: pointer;
 }
 
 .gradient-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  width: 85%; /* Slightly reduced width for a sleek look */
+  width: 85%;
   height: 100%;
   background: linear-gradient(to right, #e6e4f0, #ffffff);
   border-radius: 15px;
@@ -64,20 +65,73 @@
 }
 
 .contact-btn:hover {
-  color: #4e00b7 !;
+  color: #4e00b7 !important;
   transform: translateY(-2px);
 }
 
 .image-container {
-  flex: 1.5; /* Increased image container size */
+  flex: 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .property-image {
-  max-width: 90%;
-  max-height: 90%; /* Increased image size while maintaining proportions */
+  width: 100%;
+  max-width: 30vw;
   border-radius: 15px;
   object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .gradient-container {
+    flex-direction: column-reverse;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .content {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  .property-image {
+    max-width: 40vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .gradient-container {
+    width: 95%;
+  }
+
+  .property-image {
+    max-width: 45vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .gradient-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .property-image {
+    max-width: 60vw;
+  }
+
+  .builder-name {
+    font-size: 20px;
+  }
+
+  .property-type,
+  .property-location,
+  .property-price {
+    font-size: 16px;
+  }
+
+  .contact-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
 }

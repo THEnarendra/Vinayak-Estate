@@ -5,33 +5,14 @@ import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
 import './BuilderSection.css';
 import PropertyPopup from '../Popup/PropertyPopup';
-import img from '../../img/Interior Swiper/1.jpg'
 import { useNavigate } from 'react-router-dom';
+import buildersData from '../../staticData/data';
 
 const CarouselContainer = styled.div`
-  width: 90%;
+  width: 97%;
   margin: auto;
   padding: 40px 20px; /* Increased padding for better spacing */
 `;
-
-const buildersData = [
-  {
-    id: 1,
-    image: img,
-    builderName: 'Kedia Real Estate',
-    location: 'Vaishali Nagar, Jaipur',
-    price: '₹59.0L - ₹82.0L',
-    type: '3 BHK Villa',
-  },
-  {
-    id: 2,
-    image: img,
-    builderName: 'Ganga Kotecha',
-    location: 'Mansarovar, Jaipur',
-    price: '₹44.28L - ₹65.97L',
-    type: '2, 3 BHK Apartments',
-  },
-];
 
 const BuilderSection = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -81,7 +62,6 @@ const BuilderSection = () => {
                     Contact
                   </button>
                 </div>
-                {/* Right Image */}
                 <div className="image-container">
                   <img
                     src={builder.image}
@@ -95,7 +75,6 @@ const BuilderSection = () => {
         </Slider>
       </CarouselContainer>
 
-      {/* Popup Component */}
       {isPopupOpen && selectedBuilder && (
         <PropertyPopup
           isOpen={isPopupOpen}

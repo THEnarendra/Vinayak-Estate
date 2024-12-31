@@ -1,90 +1,176 @@
 .footer {
-	height: calc(100vh - 100px);
-	width: 100%;
-	background-color: #2c3e50;
-	color: #fff;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
+    height: auto; /* Adjust height dynamically */
+    width: 100%;
+    background-color: #2c3e50;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
 }
+
 .footer header {
-	display: flex;
+    display: flex;
+	flex-wrap: wrap;
+    align-items: center;
 	justify-content: space-between;
-	margin: 0 7rem;
 }
-.footer-heading {
-	font-size: 2.5rem;
+
+.footer header h2 {
+    margin-bottom: 1rem;
 }
-.footer-line {
-	height: 1px;
-	background-color: #fff;
-	margin: 0 7rem;
-}
+
 .newsletter {
-	display: flex;
-	height: 100px;
-	width: 600px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 1rem;
 }
+
 .newsletter input {
-	width: 70%;
-	height: 100%;
-	border: none;
-	padding: 0 0 0 2rem;
+    width: 70%;
+    height: 40px;
+    border: none;
+    padding: 0 0 0 1rem;
+    font-size: 1rem;
 }
+
 .newsletter button {
-	width: 30%;
-	height: 100%;
-	border: none;
-	background: #fff;
+    border: none;
+    background: #fff;
+    padding: 0 1rem;
 }
+
 .newsletter button i {
-	color: var(--textColor);
-	font-size: 3rem;
+    color: var(--textColor);
+    font-size: 1.5rem;
 }
+
 .newsletter button:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
+
+.footer-line {
+    height: 1px;
+    background-color: #fff;
+    margin: 2rem 0;
+}
+
 footer {
-	margin: 0 7rem;
-	display: flex;
-	width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
+
 .logo-section {
-	width: 30%;
+    flex: 1;
+    min-width: 150px;
 }
+
 .footer-links {
-	width: 70%;
-	display: flex;
-	justify-content: space-around;
-	margin: 0 20rem 0 20rem;
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
 }
+
+.footer-links div {
+    min-width: 150px;
+}
+
 .foot-links {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 .footer-links p {
-	text-transform: uppercase;
-	color: #808b96;
+    text-transform: uppercase;
+    color: #808b96;
 }
+
 .foot-links a {
-	text-decoration: none;
-	color: #fff;
-	padding: 1rem 0;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 0;
 }
-.copy-heading {
-	font-size: 2.5rem;
-	padding-bottom: 4rem;
+
+.foot-links a:hover {
+    color: var(--primaryColor);
+    transition: all 0.4s ease-in-out;
 }
+
 .copyright {
-	line-height: 25px;
-	letter-spacing: 2px;
-	text-align: center;
-	padding-bottom: 1rem;
+    margin-top: 2rem;
 }
+
 .copyright a {
-	color: #fff;
+    color: #fff;
 }
+
 .copyright a:hover {
-	color: var(--primaryColor);
-	transition: all 0.4s ease-in-out;
+    color: var(--primaryColor);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 1rem;
+    }
+
+    .newsletter {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newsletter input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter button {
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-links div {
+        min-width: unset;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 1rem;
+    }
+
+    .newsletter input {
+        font-size: 0.9rem;
+    }
+
+    .newsletter button i {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        gap: 1rem;
+    }
+
+    .footer-links div {
+        text-align: center;
+    }
 }

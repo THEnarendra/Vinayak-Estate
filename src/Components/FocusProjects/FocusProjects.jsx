@@ -7,7 +7,7 @@ const FocusProjects = () => {
   return (
     <div className="focus-section">
       <div className="focus-heading">
-        <h2>Projects in <span className="highlight">Focus</span></h2>
+        <h1>Projects in <span className="highlight">Focus</span></h1>
         <p>Noteworthy projects in Jaipur</p>
       </div>
       <div className='fcousProject'>

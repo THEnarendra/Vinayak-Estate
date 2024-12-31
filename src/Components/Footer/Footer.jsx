@@ -2,14 +2,14 @@ import React from 'react'
 import './Footer.css'
 
 const Footer = () => {
-  return (
-	<div className="footer" id="contacts">
+	return (
+		<div className="footer" id="contacts">
 			<header>
 				<div>
-					<p className="footer-heading">
+					<h2>
 						Realestate <br />
 						Subscribe To Our Newsletter
-					</p>
+					</h2>
 				</div>
 				<div>
 					<div className="newsletter">
@@ -26,7 +26,7 @@ const Footer = () => {
 			<span className="footer-line"></span>
 			<footer>
 				<div className="logo-section">
-					<p className="copy-heading">realestate</p>
+					<h2>realestate</h2>
 				</div>
 				<div className="footer-links">
 					<div>
@@ -61,13 +61,13 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
-				<p className="copyright">
-						&copy; 2021 - created by{" "}
-						<a href="https://github.com/lumunge" target="_blank" rel="noreferrer">lumunge</a>
-					</p>
 			</footer>
+			<p className="copyright">
+				&copy; 2021 - created by{" "}
+				<a href="https://github.com/lumunge" target="_blank" rel="noreferrer">lumunge</a>
+			</p>
 		</div>
-  )
+	)
 }
 
 export default Footer
