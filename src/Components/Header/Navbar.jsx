@@ -34,14 +34,14 @@ export default function Navbar() {
 						About
 					</Link>
 				</div>
-				<div className="nav-link">
+				{/* <div className="nav-link">
 					<Link
 						to="/apartments"
 						onClick={() => showMenu()}
 					>
 						Apartments
 					</Link>
-				</div>
+				</div> */}
 				<div className="nav-link">
 					<Link
 						to="/services"
