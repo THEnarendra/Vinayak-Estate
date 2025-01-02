@@ -30,12 +30,14 @@ export default function PropertyDetails() {
           </p>
         </Col>
       </Row>
+
       {/* <Row className="propertyDetails-header">
         <Col md={4} className="text-md-end propertyDetails-contact-owner-box">
           <Button className="propertyDetails-contact-btn">Contact Owner</Button>
           <Button className="propertyDetails-phone-btn">Get Phone No.</Button>
         </Col>
       </Row> */}
+      
       <Row className="propertyDetails-main-details">
         <Col md={8} className="propertyDetails-image-grid">
           <div className="propertyDetails-large-image">
