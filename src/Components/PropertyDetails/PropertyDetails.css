@@ -102,6 +102,7 @@
   width: 17.4rem;
   height: 17.4rem;
   margin-bottom: 4%;
+  object-fit: cover;
 }
 .detail-item{
   width: 50%;
