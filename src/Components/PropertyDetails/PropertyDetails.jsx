@@ -19,10 +19,8 @@ import { useParams } from "react-router-dom";
 
 export default function PropertyDetails() {
   const { id, route } = useParams();
-  const apartments = id === "Lands" ? propertyData.LandData : id=== "Villas" ? propertyData. VillasData : id === "Farm%20Houses" ? propertyData.FarmHouseData : propertyData.FlatsData;
-
+  const apartments = route === "Lands" ? propertyData.LandData : route=== "Villas" ? propertyData.VillasData : route === "Farm%20Houses" ? propertyData.FarmHouseData : propertyData.FlatsData;
   const property = apartments.find((property) => property.id === parseInt(id));
-
   return (
     <Container className="propertyDetails-page">
       <Row className="propertyDetails-breadcrumb-row">
