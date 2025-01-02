@@ -58,13 +58,6 @@
   gap: 5px;
 }
 
-.propertyDetails-small-image img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-/* Contact Box */
 .propertyDetails-contact-box {
   background-color: #f8f9fa;
   border-radius: 8px;
@@ -104,4 +97,15 @@
 .propertyDetails-get-phone-btn {
   width: 100%;
   font-size: 14px;
+}
+.propertyImages{
+  width: 17.4rem;
+  height: 17.4rem;
+  margin-bottom: 4%;
+}
+.detail-item{
+  width: 50%;
+  display: flex;
+  margin-bottom: 3%;
+  align-items: center;
 }
