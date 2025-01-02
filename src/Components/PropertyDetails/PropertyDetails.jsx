@@ -19,7 +19,8 @@ import { useParams } from "react-router-dom";
 
 export default function PropertyDetails() {
   const { id, route } = useParams();
-  const apartments = route === "Lands" ? propertyData.VillasData : []
+  const apartments = id === "Lands" ? propertyData.LandData : id=== "Villas" ? propertyData. VillasData : id === "Farm%20Houses" ? propertyData.FarmHouseData : propertyData.FlatsData;
+
   const property = apartments.find((property) => property.id === parseInt(id));
 
   return (
@@ -27,7 +28,7 @@ export default function PropertyDetails() {
       <Row className="propertyDetails-breadcrumb-row">
         <Col>
           <p className="propertyDetails-breadcrumb">
-            {property.location.address + ", " + property.location.city + ", " + property.location.state}
+            {property?.location?.address + ", " + property?.location?.city + ", " + property?.location?.state}
           </p>
         </Col>
       </Row>
@@ -48,7 +49,7 @@ export default function PropertyDetails() {
           </div>
           <div className="propertyDetails-small-images">
             <Row>
-            {property.images.map((img, index) => (
+            {property?.images.map((img, index) => (
               <Col key={index} md={4}>
               <div key={index} className="propertyDetails-small-image">
                 <img src={img} alt={`Small ${index + 1}`} />
@@ -71,9 +72,9 @@ export default function PropertyDetails() {
       </Row>
       <Row>
         <Col>
-          <h1>{property.title}</h1>
+          <h1>{property?.title}</h1>
           <p>
-            <FontAwesomeIcon icon={faMapMarkerAlt} /> {property.location.address}, {property.location.city}
+            <FontAwesomeIcon icon={faMapMarkerAlt} /> {property?.location.address}, {property?.location.city}
           </p>
           {/* <p>
             Contact: <FontAwesomeIcon icon={faPhoneAlt} /> {contact.phone}
@@ -90,31 +91,31 @@ export default function PropertyDetails() {
       <Row className="details-grid">
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faRulerCombined} />
-          <span>Size: {property.propertyDetails.size}</span>
+          <span>Size: {property?.propertyDetails.size}</span>
         </Col>
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faCompass} />
-          <span>Facing: {property.propertyDetails.facing}</span>
+          <span>Facing: {property?.propertyDetails.facing}</span>
         </Col>
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faBed} />
-          <span>Bedrooms: {property.propertyDetails.bedrooms}</span>
+          <span>Bedrooms: {property?.propertyDetails.bedrooms}</span>
         </Col>
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faChild} />
-          <span>Kids Room: {property.propertyDetails.kidsRoom}</span>
+          <span>Kids Room: {property?.propertyDetails.kidsRoom}</span>
         </Col>
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faBath} />
-          <span>Bathrooms: {property.propertyDetails.bathrooms}</span>
+          <span>Bathrooms: {property?.propertyDetails.bathrooms}</span>
         </Col>
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faHome} />
-          <span>Drawing Room: {property.propertyDetails.drawingRoom ? "Yes" : "No"}</span>
+          <span>Drawing Room: {property?.propertyDetails.drawingRoom ? "Yes" : "No"}</span>
         </Col>
         <Col xs={6} sm={4} className="detail-item">
           <FontAwesomeIcon icon={faCouch} />
-          {/* <span>Furnished: {property.propertyDetails.f? "Yes" : "No"}</span> */}
+          {/* <span>Furnished: {property?.propertyDetails.f? "Yes" : "No"}</span> */}
         </Col>
         <Col xs={12} className="mt-3">
           <p className="price">
