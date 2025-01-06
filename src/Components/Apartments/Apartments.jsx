@@ -19,9 +19,9 @@ const Apartments = () => {
     <Container fluid className="apartments-page">
       <Row className="mb-3 align-items-center">
         <Col>
-          <h4>9256 results | Flats for Sale in Jaipur</h4>
+          <h4>{apartments.length} results | {id} for Sale in Jaipur</h4>
           <p>
-            Explore flats in Jaipur in the price range of ₹15 Lac - ₹9.41 Cr with 1-5 BHK options.
+            Explore Luxury {id} in Jaipur.
           </p>
         </Col>
         <Col xs="auto">
@@ -50,11 +50,11 @@ const Apartments = () => {
                 </Col>
 
                 <Col md={6} className="apartment-details">
-                  <h5 onClick={handleNavigate}>{apartment.title}</h5>
+                  <h5 onClick={()=>handleNavigate(apartment.id)}>{apartment.title}</h5>
                   <Row className="my-2">
                     <Col>
                       <p>
-                        <strong>Address:</strong> {apartment.location.address + ", " + apartment.location.city + ", " + apartment.location.state}
+                        <strong>Address:</strong> {apartment.location + ", " + apartment.location.city + ", " + apartment.location.state}
                       </p>
                       <p>
                         <strong>Carpet Area:</strong> {apartment.propertyDetails.dimensions + ", " + apartment.propertyDetails.size}

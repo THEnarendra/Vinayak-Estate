@@ -1,32 +1,29 @@
-import { villa1 } from "../img/PropertyImages/propertyImages";
+import { villa1 , villa2 } from "../img/PropertyImages/propertyImages";
 
 const VillasData = [
   {
     id: 1,
-    title: "133 गज मे आपकी सोच और सपनों से कही ज्यादा शानदार बना हुआ 4 BHK with kids room विला 🤩",
-    location: {
-      address: "Near national super mart gandipath jagdamba nagar D, Vaishali West Jaipur",
-      city: "Jaipur",
-      landmark: "Near national super mart gandipath"
-    },
+    title: "111 गज मे आपकी सोच और सपनों से कही ज्यादा शानदार बना हुआ 4 BHK with kids room विला 🤩",
+    location: "📍Near Manas Hospital , Vaishali West Dhawas Jaipur",
     propertyDetails: {
-      size: "133.33 Sqyrd",
-      dimensions: "30 x 40",
+      size: "111 Sqyrd",
+      dimensions: "30 x 50",
       bedrooms: 4,
       kidsRoom: 1,
+      studyRoom: "",
       bathrooms: 4,
       drawingRoom: true,
       facing: "West",
       features: {
         interior: "Super Luxury Interior",
-        furnished: true,
+        furnished: "fully furnished",
         approvals: "JDA Approved",
         separatePatta: true,
         furniture: [
           "King Size Bed",
-          "AC",
+          "AC-4",
           "Sofa",
-          "LED TV",
+          "LED TV-1",
           "Curtains"
         ],
         kitchen: ["Chimney"],
@@ -36,48 +33,24 @@ const VillasData = [
       nearby: ["School", "Temple", "Hospital"]
     },
     askprice: "Contact for price",
-    images: [
-      villa1.v1_1,
-      villa1.v1_2,
-      villa1.v1_3,
-      villa1.v1_4,
-      villa1.v1_5,
-      villa1.v1_6,
-      villa1.v1_7,
-      villa1.v1_8,
-      villa1.v1_9,
-      villa1.v1_10,
-      villa1.v1_11,
-      villa1.v1_12,
-      villa1.v1_13,
-      villa1.v1_14,
-      villa1.v1_15,
-      villa1.v1_16,
-      villa1.v1_17,
-      villa1.v1_18,
-      villa1.v1_19,
-      villa1.v1_20,
-    ]
+    images: Object.values(villa1),
   },
   {
     id: 2,
-    title: "133 गज मे आपकी सोच और सपनों से कही ज्यादा शानदार बना हुआ 4 BHK with kids room विला 🤩",
-    location: {
-      address: "Near national super mart gandipath jagdamba nagar D, Vaishali West Jaipur",
-      city: "Jaipur",
-      landmark: "Near national super mart gandipath"
-    },
+    title: "100 गज मे आपकी सोच और सपनों से कही ज्यादा शानदार बना हुआ 4 BHK with Study space विला 🤩",
+    location: "📍Near Manas Hospital , Vaishali West Dhawas Jaipur",
     propertyDetails: {
-      size: "133.33 Sqyrd",
-      dimensions: "30 x 40",
+      size: "100 Sqyrd",
+      dimensions: "20 x 45",
       bedrooms: 4,
-      kidsRoom: 1,
+      kidsRoom: "",
+      studyRoom: 2,
       bathrooms: 4,
       drawingRoom: true,
       facing: "West",
       features: {
         interior: "Super Luxury Interior",
-        furnished: true,
+        furnished: "fully furnished",
         approvals: "JDA Approved",
         separatePatta: true,
         furniture: [
@@ -94,10 +67,9 @@ const VillasData = [
       nearby: ["School", "Temple", "Hospital"]
     },
     askprice: "Contact for price",
-    images: [
-
-    ]
-  }
+    images: Object.values(villa2),
+  },
+  
 ];
 
 const FlatsData = [
