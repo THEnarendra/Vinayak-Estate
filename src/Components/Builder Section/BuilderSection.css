@@ -57,13 +57,12 @@
   padding: 8px 16px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.4rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
   align-self: flex-start;
 }
 
 .contact-btn:hover {
-  color: #4e00b7 !important;
   transform: translateY(-2px);
 }
 

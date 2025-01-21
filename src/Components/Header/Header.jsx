@@ -24,7 +24,7 @@ const Header = () => {
     <Container fluid className="header-container">
       <Row className="align-items-center">
         <Col lg={6} md={6} sm={12} className="text-container">
-          <h1 style={{ fontSize: "4rem" }}>
+          <h1 style={{ fontSize: "3.5rem" }}>
             Welcome to Your Dream Properties...
           </h1>
           <p style={{ fontSize: 22 }}>
