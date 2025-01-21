@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./FeaturedProjects.css";
-import img1 from "../../img/Interior Swiper/1.jpg";
-import img2 from "../../img/Interior Swiper/2.jpg";
-import img3 from "../../img/Interior Swiper/3.jpg";
-import img4 from "../../img/Interior Swiper/4.jpg";
+import land from "../../img/land.png";
+import villa from "../../img/villa.jpg";
+import farmHouse from "../../img/farmHouse.png";
+import flats from "../../img/flats.jpg";
 
 const FeaturedProjects = () => {
   const navigate = useNavigate();
@@ -16,22 +16,22 @@ const FeaturedProjects = () => {
     {
       title: "Lands",
       description: "Land available for immediate use",
-      image: img1,
+      image: land,
     },
     {
       title: "Villas",
       description: "Redefining community living Villas",
-      image: img2,
+      image: villa,
     },
     {
       title: "Farm Houses",
       description: "Premium housing for the lifestyle-conscious",
-      image: img3,
+      image: farmHouse,
     },
     {
       title: "Flats",
       description: "Experience serene beachside living",
-      image: img4,
+      image: flats,
     },
   ];
 

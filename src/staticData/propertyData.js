@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import { villa1 , villa2 } from "../img/PropertyImages/propertyImages";
 
 const VillasData = [
@@ -5,6 +6,11 @@ const VillasData = [
     id: 1,
     title: "111 गज मे आपकी सोच और सपनों से कही ज्यादा शानदार बना हुआ 4 BHK with kids room विला 🤩",
     location: "📍Near Manas Hospital , Vaishali West Dhawas Jaipur",
+    featureType: ["Featured", "Spotlight"],
+    contactInfo: {
+      phone: "+91 123 456 7890",
+      email: "contact@builder.com",
+    },
     propertyDetails: {
       size: "111 Sqyrd",
       dimensions: "30 x 50",
@@ -39,6 +45,11 @@ const VillasData = [
     id: 2,
     title: "100 गज मे आपकी सोच और सपनों से कही ज्यादा शानदार बना हुआ 4 BHK with Study space विला 🤩",
     location: "📍Near Manas Hospital , Vaishali West Dhawas Jaipur",
+    featureType: ["Featured", "Spotlight"],
+    contactInfo: {
+      phone: "+91 123 456 7890",
+      email: "contact@builder.com",
+    },
     propertyDetails: {
       size: "100 Sqyrd",
       dimensions: "20 x 45",

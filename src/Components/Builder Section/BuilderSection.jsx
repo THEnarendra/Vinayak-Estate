@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import './BuilderSection.css';
 import PropertyPopup from '../Popup/PropertyPopup';
 import { useNavigate } from 'react-router-dom';
-import buildersData from '../../staticData/data';
+import propertyData from '../../staticData/propertyData';
 
 const CarouselContainer = styled.div`
   width: 97%;
@@ -41,31 +41,33 @@ const BuilderSection = () => {
     arrows: true,
   };
 
+  // Filter only properties with the 'Spotlight' featureType
+  const spotlightProperties = propertyData.VillasData.filter((villa) =>
+    villa.featureType.includes("Spotlight")
+  );
+
   return (
     <>
       <CarouselContainer>
-        <Slider {...settings} >
-          {buildersData.map((builder) => (
-            <div className="carousel-item" 
-            onClick={()=>navigate("/propertydetails")}
-            key={builder.id}>
+        <Slider {...settings}>
+          {spotlightProperties.map((builder) => (
+            <div className="carousel-item" key={builder.id}>
               <div className="gradient-container">
                 <div className="content">
-                  <h3 className="builder-name">{builder.builderName}</h3>
-                  <p className="property-type">{builder.type}</p>
+                  <h3 className="builder-name">{builder.title}</h3>
                   <p className="property-location">{builder.location}</p>
-                  <strong className="property-price">{builder.price}</strong>
+                  <strong className="property-price">{builder.askprice}</strong>
                   <button
                     className="contact-btn"
-                    onClick={() => openPopup(builder)}
+                    onClick={() => openPopup(builder)} 
                   >
                     Contact
                   </button>
                 </div>
                 <div className="image-container">
                   <img
-                    src={builder.image}
-                    alt={builder.builderName}
+                    src={builder.images[0]} // Assuming you want to show the first image
+                    alt={builder.title}
                     className="property-image"
                   />
                 </div>
@@ -79,9 +81,14 @@ const BuilderSection = () => {
         <PropertyPopup
           isOpen={isPopupOpen}
           onClose={closePopup}
-          image={selectedBuilder.image}
-          name={selectedBuilder.builderName}
-          price={selectedBuilder.price}
+          image={selectedBuilder.images[0]} // Display selected image
+          name={selectedBuilder.title} // Display selected title
+          price={selectedBuilder.askprice} // Display selected price
+          id={selectedBuilder.id} // Pass the id to navigate to property details
+          contactInfo={{
+            phone: selectedBuilder.contactInfo.phone, // Assuming this data exists
+            email: selectedBuilder.contactInfo.email, // Assuming this data exists
+          }}
         />
       )}
     </>
