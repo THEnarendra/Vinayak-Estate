@@ -110,7 +110,7 @@ body {
 }
 
 .homeSection {
-	margin: 10vh 5vw;
+	margin: 10vh 2vw;
 }
 
 .carousel h1 span {
@@ -260,8 +260,4 @@ body {
 		padding: 2rem 4rem;
 		width: 100%;
 	}
-}
-
-.carousel {
-	margin: 3% 0%;
 }

@@ -1,8 +1,12 @@
-.featured-collections {
-    padding: 10px 30px;
-  }
-.featured-collections h1 span{
+
+.featured-collections h1{
+  font-size: 3rem;
+}.featured-collections h1 span{
+  font-size: 3rem;
   color: #6200ea;
+}
+.para2{
+  font-size: 1.4rem;
 }
   .collection-card {
     padding: 20px 20px;
@@ -10,7 +14,6 @@
   
   .slick-arrow {
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.5);
     color: white;
     border-radius: 50%;
     height: 40px;

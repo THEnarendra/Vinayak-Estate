@@ -13,10 +13,9 @@
 }
 @media screen and (max-width:997px) {
     .yourSwiper{
-        height: 60vh;
-        width: 75vw;
+        height: 55vh;
+        width: 85vw;
         margin-left: 5%;
-        margin-top: 3%;
         margin-bottom: 5%;
     }
     

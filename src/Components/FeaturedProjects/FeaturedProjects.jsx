@@ -65,7 +65,7 @@ const FeaturedProjects = () => {
   return (
     <div className="featured-collections">
       <h1 className="text-center">Our <span>Collections</span></h1>
-      <p className="text-center">Designed for You</p>
+      <p className="text-center para2">Designed for You</p>
       <Slider {...sliderSettings} className="mt-4">
         {collections.map((collection, index) => (
           <div key={index} className="collection-card">
@@ -77,7 +77,7 @@ const FeaturedProjects = () => {
                 backgroundPosition: "center",
                 borderRadius: "8px",
                 overflow: "hidden",
-                height: "250px",
+                height: "350px",
                 position: "relative", 
                 transition: "transform 0.3s ease",
               }}
@@ -102,8 +102,8 @@ const FeaturedProjects = () => {
                   zIndex: 2,
                 }}
               >
-                <h5 className="mb-1">{collection.title}</h5>
-                <p style={{ fontSize: "0.9rem", margin: 0 }}>{collection.description}</p>
+                <h3 className="mb-1">{collection.title}</h3>
+                <p style={{ fontSize: "1rem", margin: 0 }}>{collection.description}</p>
               </div>
             </div>
           </div>

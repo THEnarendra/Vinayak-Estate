@@ -9,9 +9,9 @@ import { useNavigate } from 'react-router-dom';
 import propertyData from '../../staticData/propertyData';
 
 const CarouselContainer = styled.div`
-  width: 97%;
+  width: 100%;
   margin: auto;
-  padding: 40px 20px; /* Increased padding for better spacing */
+  padding: 4px 2px;
 `;
 
 const BuilderSection = () => {
@@ -41,7 +41,6 @@ const BuilderSection = () => {
     arrows: true,
   };
 
-  // Filter only properties with the 'Spotlight' featureType
   const spotlightProperties = propertyData.VillasData.filter((villa) =>
     villa.featureType.includes("Spotlight")
   );
@@ -55,6 +54,7 @@ const BuilderSection = () => {
               <div className="gradient-container">
                 <div className="content">
                   <h3 className="builder-name">{builder.title}</h3>
+                  <p className="property-location">{builder.description}</p>
                   <p className="property-location">{builder.location}</p>
                   <strong className="property-price">{builder.askprice}</strong>
                   <button
@@ -66,7 +66,7 @@ const BuilderSection = () => {
                 </div>
                 <div className="image-container">
                   <img
-                    src={builder.images[0]} // Assuming you want to show the first image
+                    src={builder.images[0]}
                     alt={builder.title}
                     className="property-image"
                   />
