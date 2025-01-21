@@ -1,53 +1,51 @@
-
-.featured-collections h1{
+.featured-collections h1 {
   font-size: 3rem;
-}.featured-collections h1 span{
+}
+.featured-collections h1 span {
   font-size: 3rem;
   color: #6200ea;
 }
-.para2{
+.para2 {
   font-size: 1.4rem;
 }
-  .collection-card {
-    padding: 20px 20px;
-  }
-  
-  .slick-arrow {
-    z-index: 1000;
-    color: white;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-  }
-  .slick-prev{
-    left: -40px;
-  }
-  .slick-next{
-  right: -40px;
-  } 
-  .slick-arrow:hover {
-    background: rgba(0, 0, 0, 0.8);
-  }
-  
-  .slick-dots li button:before {
-    color: #000;
-  }
-  
-  .slick-dots li.slick-active button:before {
-    color: #000;
-  }
-  
+.collection-card {
+  padding: 20px 20px;
+}
 
-  .collection-card .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .collection-card .card:hover {
-    transform: scale(1.05); /* Increase the card size on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for a 3D effect */
-  }
-  
+.slick-arrow {
+  z-index: 1000;
+  color: white;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.slick-prev {
+  left: -40px;
+}
+.slick-next {
+  right: -40px;
+}
+.slick-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slick-dots li button:before {
+  color: #000;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #000;
+}
+
+.collection-card .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.collection-card .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

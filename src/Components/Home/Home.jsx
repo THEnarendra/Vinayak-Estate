@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../Header/Header";
 import BuilderSlider from "../Builder Section/BuilderSection";
-import FocusProjects from "../FocusProjects/FocusProjects";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
@@ -10,7 +9,6 @@ import "./Home.css";
 import { interiorImg } from "../../img/PropertyImages/propertyImages";
 import { Col, Row } from "react-bootstrap";
 import FeaturedProjects from "../FeaturedProjects/FeaturedProjects";
-import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const images = Object.values(interiorImg);

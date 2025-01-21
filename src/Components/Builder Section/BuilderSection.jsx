@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import styled from 'styled-components';
-import './BuilderSection.css';
-import PropertyPopup from '../Popup/PropertyPopup';
-import { useNavigate } from 'react-router-dom';
-import propertyData from '../../staticData/propertyData';
+import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import styled from "styled-components";
+import "./BuilderSection.css";
+import PropertyPopup from "../Popup/PropertyPopup";
+import { useNavigate } from "react-router-dom";
+import propertyData from "../../staticData/propertyData";
 
 const CarouselContainer = styled.div`
   width: 100%;
@@ -59,7 +59,7 @@ const BuilderSection = () => {
                   <strong className="property-price">{builder.askprice}</strong>
                   <button
                     className="contact-btn"
-                    onClick={() => openPopup(builder)} 
+                    onClick={() => openPopup(builder)}
                   >
                     Contact
                   </button>
@@ -81,14 +81,14 @@ const BuilderSection = () => {
         <PropertyPopup
           isOpen={isPopupOpen}
           onClose={closePopup}
-          image={selectedBuilder.images[0]} // Display selected image
-          name={selectedBuilder.title} // Display selected title
-          price={selectedBuilder.askprice} // Display selected price
-          id={selectedBuilder.id} // Pass the id to navigate to property details
-          propertyType={selectedBuilder.propertyType} // Pass the property type
+          image={selectedBuilder.images[0]}
+          name={selectedBuilder.title}
+          price={selectedBuilder.askprice}
+          id={selectedBuilder.id}
+          propertyType={selectedBuilder.propertyType}
           contactInfo={{
-            phone: selectedBuilder.contactInfo.phone, // Assuming this data exists
-            email: selectedBuilder.contactInfo.email, // Assuming this data exists
+            phone: selectedBuilder.contactInfo.phone,
+            email: selectedBuilder.contactInfo.email,
           }}
         />
       )}

@@ -64,7 +64,9 @@ const FeaturedProjects = () => {
 
   return (
     <div className="featured-collections">
-      <h1 className="text-center">Our <span>Collections</span></h1>
+      <h1 className="text-center">
+        Our <span>Collections</span>
+      </h1>
       <p className="text-center para2">Designed for You</p>
       <Slider {...sliderSettings} className="mt-4">
         {collections.map((collection, index) => (
@@ -78,10 +80,10 @@ const FeaturedProjects = () => {
                 borderRadius: "8px",
                 overflow: "hidden",
                 height: "350px",
-                position: "relative", 
+                position: "relative",
                 transition: "transform 0.3s ease",
               }}
-              onClick={()=>handleCardClick(collection.title)}
+              onClick={() => handleCardClick(collection.title)}
             >
               <div
                 style={{
@@ -90,7 +92,8 @@ const FeaturedProjects = () => {
                   left: 0,
                   width: "100%",
                   height: "40%",
-                  background: "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)",
+                  background:
+                    "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)",
                 }}
               ></div>
               <div
@@ -103,7 +106,9 @@ const FeaturedProjects = () => {
                 }}
               >
                 <h3 className="mb-1">{collection.title}</h3>
-                <p style={{ fontSize: "1rem", margin: 0 }}>{collection.description}</p>
+                <p style={{ fontSize: "1rem", margin: 0 }}>
+                  {collection.description}
+                </p>
               </div>
             </div>
           </div>

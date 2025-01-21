@@ -11,13 +11,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   height: 100%;
   background: linear-gradient(to right, #e3ddff7c, #f8daff4f);
   border-radius: 15px;
   padding: 2% 5%;
-  /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); */
   margin: 0 auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -132,10 +131,5 @@
   .property-location,
   .property-price {
     font-size: 16px;
-  }
-
-  .contact-btn {
-    font-size: 14px;
-    padding: 6px 12px;
   }
 }

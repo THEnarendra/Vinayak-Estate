@@ -27,9 +27,7 @@ export default function PropertyDetails() {
       ? propertyData.FarmHouseData
       : propertyData.FlatsData;
 
-  const property = apartments.find(
-    (property) => property.id === parseInt(id)
-  );
+  const property = apartments.find((property) => property.id === parseInt(id));
 
   const handleShowAll = () => {
     setShowAll(true);
@@ -43,7 +41,6 @@ export default function PropertyDetails() {
   return (
     <Container className="propertyDetails-page">
       <Row>
-        {/* Left Side: Property Images and Details */}
         <Col md={8}>
           <Row>
             {imagesToShow.map((img, index) => (
@@ -70,18 +67,30 @@ export default function PropertyDetails() {
               </Col>
             ))}
           </Row>
-          <Row className="propertyDetails-info">
-            <Col>
-              <h4>{property?.title}</h4>
-              <h5>
-                <FontAwesomeIcon icon={faMapMarkerAlt} /> {property?.location}
-              </h5>
-              <p>
-                <FontAwesomeIcon icon={faRulerCombined} />{" "}
-                {property?.propertyDetails.dimensions},{" "}
-                {property?.propertyDetails.size}
-              </p>
-              <hr />
+        </Col>
+        <Col md={4} className="get-contact">
+          <div className="sticky-contact">
+            <h5>Contact Dealer</h5>
+            <p>
+              Er. Rakesh Kumawat <br />- 91-95XXXXXXXX
+            </p>
+          </div>
+        </Col>
+      </Row>
+      <Row className="propertyDetails-info">
+        <Col>
+          <h4>{property?.title}</h4>
+          <h5>
+            <FontAwesomeIcon icon={faMapMarkerAlt} /> {property?.location}
+          </h5>
+          <p>
+            <FontAwesomeIcon icon={faRulerCombined} />{" "}
+            {property?.propertyDetails.dimensions},{" "}
+            {property?.propertyDetails.size}
+          </p>
+          <hr />
+          <Row>
+            <Col md={3}>
               <h5>Property Details</h5>
               <ul className="propertyDetails-list">
                 <li>
@@ -108,7 +117,8 @@ export default function PropertyDetails() {
                   <FontAwesomeIcon icon={faCouch} /> Drawing Room
                 </li>
               </ul>
-              <hr />
+            </Col>
+            <Col md={3}>
               <h5>Features</h5>
               <ul className="propertyDetails-list">
                 <li>{property?.propertyDetails.features.interior}</li>
@@ -116,31 +126,25 @@ export default function PropertyDetails() {
                 <li>{property?.propertyDetails.features.approvals}</li>
                 <li>{property?.propertyDetails.features.separatePatta}</li>
               </ul>
-              <hr />
+            </Col>
+            <Col md={3}>
               <h5>Furniture</h5>
               <p>{property?.propertyDetails.features.furniture.join(", ")}</p>
-              <hr />
+            </Col>
+            <Col md={3}>
               <h5>Kitchen</h5>
               <p>{property?.propertyDetails.features.kitchen.join(", ")}</p>
-              <hr />
+            </Col>
+            <hr/>
+            <Col md={3}>
               <h5>Security</h5>
               <p>{property?.propertyDetails.features.security.join(", ")}</p>
-              <hr />
+            </Col>
+            <Col md={3}>
               <h5>Nearby</h5>
               <p>{property?.propertyDetails.nearby.join(", ")}</p>
             </Col>
           </Row>
-        </Col>
-
-        {/* Right Side: Contact Dealer */}
-        <Col md={4} className="get-contact">
-          <div className="sticky-contact">
-            <h5>Contact Dealer</h5>
-            <p>
-              Er. Rakesh Kumawat <br />
-              - 91-95XXXXXXXX
-            </p>
-          </div>
         </Col>
       </Row>
     </Container>
