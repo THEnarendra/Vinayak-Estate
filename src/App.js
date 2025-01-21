@@ -11,17 +11,16 @@ import PropertyDetails from "./Components/PropertyDetails/PropertyDetails";
 function App() {
 	return (
 		<BrowserRouter>
-		 <Navbar/>
-		<Routes>
-			<Route path="/" element={<Home/>}/>
-			<Route path="/aboutus" element={<About/>}/>
-			<Route path="/services" element={<Services/>}/>
-			<Route path="/apartments/:id" element={<Apartments />} />
-			<Route path="/propertydetails/:route/:id" element={<PropertyDetails/>}/>
-		</Routes>
-			<Footer/>
+			<Navbar />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/aboutus" element={<About />} />
+				<Route path="/services" element={<Services />} />
+				<Route path="/:id" element={<Apartments />} />
+				<Route path="/:route/:id" element={<PropertyDetails />} />
+			</Routes>
+			<Footer />
 		</BrowserRouter>
-		
 	);
 }
 

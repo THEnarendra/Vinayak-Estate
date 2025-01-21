@@ -59,7 +59,7 @@ const FeaturedProjects = () => {
   };
 
   const handleCardClick = (type) => {
-    navigate(`/apartments/${type}`);
+    navigate(`/${type}`);
   };
 
   return (

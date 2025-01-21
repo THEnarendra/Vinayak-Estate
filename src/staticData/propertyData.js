@@ -4,6 +4,7 @@ import { villa1 , villa2 } from "../img/PropertyImages/propertyImages";
 const VillasData = [
   {
     id: 1,
+    propertyType: "Villas",
     title: "111 गज मे आपकी सोच और सपनों से कही ज्यादा शानदार बना हुआ 4 BHK with kids room विला 🤩",
     location: "📍Near Manas Hospital , Vaishali West Dhawas Jaipur",
     featureType: ["Featured", "Spotlight"],
@@ -43,6 +44,7 @@ const VillasData = [
   },
   {
     id: 2,
+    propertyType: "Villas",
     title: "100 गज मे आपकी सोच और सपनों से कही ज्यादा शानदार बना हुआ 4 BHK with Study space विला 🤩",
     location: "📍Near Manas Hospital , Vaishali West Dhawas Jaipur",
     featureType: ["Featured", "Spotlight"],
@@ -86,6 +88,7 @@ const VillasData = [
 const FlatsData = [
   {
     id: 1,
+    propertyType: "Flat",
     title: "133 गज मे आपकी सोच और सपनों से कही ज्यादा शानदार बना हुआ 4 BHK with kids room विला 🤩",
     location: {
       address: "Near national super mart gandipath jagdamba nagar D, Vaishali West Jaipur",
@@ -124,6 +127,7 @@ const FlatsData = [
   },
   {
     id: 2,
+    propertyType: "Flat",
     title: "133 गज मे आपकी सोच और सपनों से कही ज्यादा शानदार बना हुआ 4 BHK with kids room विला 🤩",
     location: {
       address: "Near national super mart gandipath jagdamba nagar D, Vaishali West Jaipur",

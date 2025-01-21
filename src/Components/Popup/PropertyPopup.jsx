@@ -1,13 +1,13 @@
 import React from "react";
 import "./PropertyPopup.css"; // Assuming you have a CSS file for styling
-import { useNavigate } from "react-router-dom";
+import { data, useNavigate } from "react-router-dom";
 
-const PropertyPopup = ({ isOpen, onClose, image, name, price, contactInfo, id }) => {
+const PropertyPopup = ({ isOpen, onClose, image, name, price, contactInfo, id, propertyType }) => {
   const navigate = useNavigate();
   if (!isOpen) return null; // Don't render if popup is not open
 
   const handleViewMoreDetails = () => {
-    navigate(`/propertyDetails/${id}`);
+    navigate(`${propertyType}/${id}`);
   };
 
   return (

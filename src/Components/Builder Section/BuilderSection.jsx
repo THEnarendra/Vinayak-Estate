@@ -85,6 +85,7 @@ const BuilderSection = () => {
           name={selectedBuilder.title} // Display selected title
           price={selectedBuilder.askprice} // Display selected price
           id={selectedBuilder.id} // Pass the id to navigate to property details
+          propertyType={selectedBuilder.propertyType} // Pass the property type
           contactInfo={{
             phone: selectedBuilder.contactInfo.phone, // Assuming this data exists
             email: selectedBuilder.contactInfo.email, // Assuming this data exists

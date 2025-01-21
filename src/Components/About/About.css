@@ -18,6 +18,13 @@
 
 .company p {
 	font-size: 1.2rem;
+  color: #6c757d;
+  padding: 0 3%;
+}
+
+.company h2 {
+  color: #1f1f1f;
+  
 }
 
 .stats {
