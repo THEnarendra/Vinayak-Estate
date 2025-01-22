@@ -24,10 +24,10 @@ const Header = () => {
     <Container fluid className="header-container">
       <Row className="align-items-center">
         <Col lg={6} md={6} sm={12} className="text-container">
-          <h1 style={{ fontSize: "3rem" }}>
+          <h1 >
             Welcome to Your Dream Properties...
           </h1>
-          <p style={{ fontSize: "1.4rem"}}>
+          <p>
             Discover the most luxurious{" "}
             <span style={{ color: "#6200ea" }}>
               Villas || Farm Houses || Flats

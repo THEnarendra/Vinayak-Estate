@@ -42,11 +42,11 @@ const Apartments = () => {
           </h4>
           <p>Explore Luxury {id} in Jaipur.</p>
         </Col>
-        <Col xs="auto">
+        {/* <Col xs="auto">
           <Button variant="outline-primary" size="sm">
             Add Localities for more relevant results →
           </Button>
-        </Col>
+        </Col> */}
       </Row>
 
       {apartments.length === 0 ? (
@@ -73,7 +73,7 @@ const Apartments = () => {
 						objectFit:"contain",
                         borderRadius: "8px",
 						width:"100%",
-						height:"18rem"
+						height:"17rem"
                       }}
                     >
                       <span className="badge bg-dark">16 Dec 2024</span>
@@ -86,7 +86,7 @@ const Apartments = () => {
                     </h5>
                     <Row className="my-2">
                       <Col>
-					  <p>
+					  <p style={{fontSize:"1rem", color:"#555", padding:"0.5rem"}}>
 						{apartment?.description}
 					  </p>
                         <p>

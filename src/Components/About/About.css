@@ -1,5 +1,5 @@
 .about {
-  margin: 7rem 1rem;
+  margin: 4rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,9 +12,10 @@
 }
 
 .company .heading {
-  font-size: 3rem;
+  font-size: 2rem;
   padding-bottom: 2rem;
 }
+
 
 .company p {
   font-size: 1.2rem;
@@ -24,6 +25,7 @@
 
 .company h2 {
   color: #1f1f1f;
+  font-size: 1.6rem;
 }
 
 .stats {
@@ -112,3 +114,61 @@
     font-size: 1.5rem;
   }
 }
+
+
+.our-enterprises span{
+  color: #6200ea;
+}
+
+
+
+.vinayak-dream-design {
+  padding: 40px 20px;
+  background: linear-gradient(to right, #ffffff, #f2f2f2);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.services-section .service-card {
+  cursor: pointer;
+  margin: 0 2%;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.services-section .service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-card img {
+  height: 40vh;
+  object-fit: cover;
+  border-bottom: 2px solid #6200ea;
+}
+
+.service-card .card-title {
+  font-size: 1.5rem;
+  color: #6200ea;
+  font-weight: bold;
+}
+
+.service-card .card-text {
+  font-size: 1rem;
+  color: #555;
+}
+

@@ -26,7 +26,7 @@ const Home = () => {
 
         <BuilderSlider />
 
-        <Row className="align-items-center my-5">
+        <Row className="align-items-center my-5" style={{ padding: "1.5rem", backgroundColor: "#f9f9f9" }}>
           <Col lg={6} md={12} className="text-center">
             <Swiper
               effect="cards"
@@ -62,7 +62,7 @@ const Home = () => {
             lg={6}
             md={12}
             className="d-flex flex-column justify-content-center text-start"
-            style={{ padding: "1.5rem" }}
+            
           >
             <h1
               style={{
@@ -73,7 +73,7 @@ const Home = () => {
             >
               Luxury <span>Interiors</span> 
             </h1>
-            <p style={{ fontSize: "1.3rem", color: "#555" }}>
+            <p style={{ fontSize: "1.2rem", color: "#555" }}>
               At <strong>Your Company Name</strong>, we specialize in creating
               bespoke interior designs that redefine elegance and
               sophistication. Whether it’s a cozy residential haven or a vibrant

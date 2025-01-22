@@ -6,7 +6,7 @@ const VillasData = [
     id: 1,
     propertyType: "Villas",
     title: "111 गज मे आपकी सोच और सपनों से कही ज्यादा शानदार बना हुआ 4 BHK with kids room विला 🤩",
-    description: "This luxurious 4 BHK villa is a perfect blend of modern design and comfort, crafted to exceed your expectations. Nestled near Manas Hospital in Vaishali West Dhawas, Jaipur, it offers spacious living areas, a kids' room, and top-notch amenities. Fully furnished with elegant wooden interiors, it features king-size beds, air conditioners, an LED TV, and a fully equipped kitchen with a chimney. The villa boasts super luxury interiors, JDA approval, and a separate patta. Located conveniently close to schools, temples, and hospitals, this west-facing villa ensures a lifestyle of convenience and elegance.",
+    description: "This 4 BHK villa near Manas Hospital, Vaishali West Dhawas, Jaipur, combines modern design with comfort. Fully furnished with wooden interiors, king-size beds, air conditioners, an LED TV, and a fully equipped kitchen, it offers super luxury interiors. JDA-approved and west-facing, it’s close to schools, temples, and hospitals, ensuring convenience and elegance.",
     location: "📍Near Manas Hospital , Vaishali West Dhawas Jaipur",
     featureType: ["Featured", "Spotlight"],
     contactInfo: {
@@ -47,7 +47,7 @@ const VillasData = [
     id: 2,
     propertyType: "Villas",
     title: "100 गज मे आपकी सोच और सपनों से कही ज्यादा शानदार बना हुआ 4 BHK with Study space विला 🤩",
-    description: "This luxurious 4 BHK villa is a perfect blend of modern design and comfort, crafted to exceed your expectations. Nestled near Manas Hospital in Vaishali West Dhawas, Jaipur, it offers spacious living areas, a kids' room, and top-notch amenities. Fully furnished with elegant wooden interiors, it features king-size beds, air conditioners, an LED TV, and a fully equipped kitchen with a chimney. The villa boasts super luxury interiors, JDA approval, and a separate patta. Located conveniently close to schools, temples, and hospitals, this west-facing villa ensures a lifestyle of convenience and elegance.",
+    description: "This luxurious 4 BHK villa near Manas Hospital, Vaishali West Dhawas, Jaipur, offers modern design, comfort, and top-notch amenities. Fully furnished with wooden interiors, it features king-size beds, air conditioners, an LED TV, and a kitchen with a chimney. With JDA approval and a west-facing layout, it’s close to schools, temples, and hospitals, ensuring a convenient and elegant lifestyle.",
     location: "📍Near Manas Hospital , Vaishali West Dhawas Jaipur",
     featureType: ["Featured", "Spotlight"],
     contactInfo: {

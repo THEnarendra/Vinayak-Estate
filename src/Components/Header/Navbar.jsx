@@ -28,11 +28,24 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="nav-link">
-            <Link to="/services">Our Services</Link>
+            <Link to="/services" onClick={() => showMenu()}>
+              Our Services
+            </Link>
           </div>
         </div>
-        <div className={menu ? "action-links" : "action-links action"}>
-          <button>Enquire Now</button>
+        <div className="social-icons">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-twitter"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-youtube"></i>
+          </a>
         </div>
         <div className={menu ? "toggler" : "toggler close"} onClick={showMenu}>
           <div className="btn-line"></div>

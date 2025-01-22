@@ -54,15 +54,18 @@ const BuilderSection = () => {
               <div className="gradient-container">
                 <div className="content">
                   <h3 className="builder-name">{builder.title}</h3>
-                  <p className="property-location">{builder.description}</p>
+                  <p className="property-description">{builder.description}</p>
                   <p className="property-location">{builder.location}</p>
-                  <strong className="property-price">{builder.askprice}</strong>
+                  {/* <strong className="property-price">{builder.askprice}</strong> */}
+                  <div className="display-flex">
+                  <strong className="property-price">For Price : </strong>
                   <button
                     className="contact-btn"
                     onClick={() => openPopup(builder)}
                   >
-                    Contact
+                    Contact Us..
                   </button>
+                  </div>
                 </div>
                 <div className="image-container">
                   <img
