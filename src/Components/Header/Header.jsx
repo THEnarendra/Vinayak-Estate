@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Header.css";
 import { home_slider } from "../../img/PropertyImages/propertyImages";
+import { Typewriter } from "react-simple-typewriter";
 
 const Header = () => {
   const settings = {
@@ -24,13 +25,20 @@ const Header = () => {
     <Container fluid className="header-container">
       <Row className="align-items-center">
         <Col lg={6} md={6} sm={12} className="text-container">
-          <h1 >
-            Welcome to Your Dream Properties...
+          <h1>Search for Your Dream Properties...
           </h1>
           <p>
             Discover the most luxurious{" "}
-            <span style={{ color: "#6200ea" }}>
-              Villas || Farm Houses || Flats
+            <span className="typing-effect">
+              <Typewriter
+                words={["Villas", "Farm Houses", "Flats"]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={100}
+                deleteSpeed={70}
+                delaySpeed={1500}
+              />
             </span>{" "}
             designed to meet all your expectations. Explore unmatched comfort
             and elegance. <br />

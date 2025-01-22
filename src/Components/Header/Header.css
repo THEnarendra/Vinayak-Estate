@@ -46,6 +46,13 @@
   color: #555;
 }
 
+.typing-effect {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6200ea;
+  display: inline;
+}
+
 .cta-button {
   background-color: #007bff;
   color: #fff;
@@ -69,4 +76,19 @@
   max-height: 60vh;
   object-fit: cover;
   border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .slider-image img {
+    max-height: 40vh;
+    padding: 1%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }

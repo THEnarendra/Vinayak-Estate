@@ -2,17 +2,12 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Row, Col, Button, Container } from "react-bootstrap";
 import styled from "styled-components";
 import "./BuilderSection.css";
 import PropertyPopup from "../Popup/PropertyPopup";
 import { useNavigate } from "react-router-dom";
 import propertyData from "../../staticData/propertyData";
-
-const CarouselContainer = styled.div`
-  width: 100%;
-  margin: auto;
-  padding: 4px 2px;
-`;
 
 const BuilderSection = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -46,40 +41,48 @@ const BuilderSection = () => {
   );
 
   return (
-    <>
-      <CarouselContainer>
-        <Slider {...settings}>
-          {spotlightProperties.map((builder) => (
-            <div className="carousel-item" key={builder.id}>
-              <div className="gradient-container">
-                <div className="content">
+    <Container fluid>
+      {/* <Row>
+        <Col className="text-center">
+          <h2 className="section-title">Spotlight Properties</h2>
+        </Col>
+      </Row> */}
+      <Slider {...settings}>
+        {spotlightProperties.map((builder) => (
+          <div key={builder.id} className="carousel-item">
+            <Container className="gradient-container">
+              <Row className="align-items-center">
+                {/* Text Content */}
+                <Col md={6} xs={12} className="text-content">
                   <h3 className="builder-name">{builder.title}</h3>
                   <p className="property-description">{builder.description}</p>
                   <p className="property-location">{builder.location}</p>
-                  {/* <strong className="property-price">{builder.askprice}</strong> */}
                   <div className="display-flex">
-                  <strong className="property-price">For Price : </strong>
-                  <button
-                    className="contact-btn"
-                    onClick={() => openPopup(builder)}
-                  >
-                    Contact Us..
-                  </button>
+                    <strong className="property-price">For Price: </strong>
+                    <Button
+                      variant="primary"
+                      className="contact-btn"
+                      onClick={() => openPopup(builder)}
+                    >
+                      Contact Us
+                    </Button>
                   </div>
-                </div>
-                <div className="image-container">
+                </Col>
+                {/* Image */}
+                <Col md={6} xs={12} className="image-container">
                   <img
                     src={builder.images[0]}
                     alt={builder.title}
                     className="property-image"
                   />
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </CarouselContainer>
+                </Col>
+              </Row>
+            </Container>
+          </div>
+        ))}
+      </Slider>
 
+      {/* Popup */}
       {isPopupOpen && selectedBuilder && (
         <PropertyPopup
           isOpen={isPopupOpen}
@@ -95,7 +98,7 @@ const BuilderSection = () => {
           }}
         />
       )}
-    </>
+    </Container>
   );
 };
 
