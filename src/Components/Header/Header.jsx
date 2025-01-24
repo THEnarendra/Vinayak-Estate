@@ -40,8 +40,9 @@ const Header = () => {
                 delaySpeed={1500}
               />
             </span>{" "}
+            <br/>
             designed to meet all your expectations. Explore unmatched comfort
-            and elegance. <br />
+            and elegance.
             From modern designs to timeless architecture, our properties are
             crafted to perfection. Experience a lifestyle that blends luxury
             with convenience, tailored just for you.

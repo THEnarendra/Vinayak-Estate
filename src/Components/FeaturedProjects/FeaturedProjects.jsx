@@ -38,7 +38,8 @@ const FeaturedProjects = () => {
   const sliderSettings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    autoplay: true,
+    speed: 200,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,

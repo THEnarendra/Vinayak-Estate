@@ -5,6 +5,14 @@
   width: 90vw;
 }
 
+.apartments-page-header h4 span{
+  color: #6200ea;
+}
+
+.apartments-page-header p{
+  color: #555;
+}
+
 .apartment-card {
   background: #fff;
   border: 1px solid #ddd;
@@ -50,6 +58,12 @@
   color: #333;
 }
 
+.apartment-details-description{
+  font-size: 1rem;
+  color: #555; 
+  padding: 0.5rem;
+}
+
 .apartment-actions button {
   margin-top: 10px;
 }
@@ -61,10 +75,30 @@
 }
 
 @media (max-width: 767px) {
+  .apartments-page-header h4{
+    font-size: 1.2rem;
+  }
+  
+  .apartments-page-header p{
+    font-size: .8rem;
+    margin-top: -5px;
+  }
   .apartment-image {
     height: 100px;
   }
   .apartment-details{
-    margin-top: 13rem;
+    margin-top: 10rem;
+  }
+  .apartment-details h5 {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .apartment-details-description{
+    text-align: center;
+    font-size: .8rem;
+    color: #555; 
+    margin-bottom: 0rem;
+    /* padding: 0.5rem; */
   }
 }

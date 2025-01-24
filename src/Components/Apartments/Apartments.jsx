@@ -36,9 +36,9 @@ const Apartments = () => {
   return (
     <Container fluid className="apartments-page">
       <Row className="mb-3 align-items-center">
-        <Col>
+        <Col className="apartments-page-header">
           <h4>
-            {apartments.length} results | {id} for Sale in Jaipur
+            {apartments.length} results || <span>{id}</span> for Sale in Jaipur
           </h4>
           <p>Explore Luxury {id} in Jaipur.</p>
         </Col>
@@ -73,10 +73,10 @@ const Apartments = () => {
 						objectFit:"contain",
                         borderRadius: "8px",
 						width:"100%",
-						height:"17rem"
+						height:"15rem"
                       }}
                     >
-                      <span className="badge bg-dark">16 Dec 2024</span>
+                      {/* <span className="badge bg-dark">16 Dec 2024</span> */}
                     </div>
                   </Col>
 
@@ -86,10 +86,10 @@ const Apartments = () => {
                     </h5>
                     <Row className="my-2">
                       <Col>
-					  <p style={{fontSize:"1rem", color:"#555", padding:"0.5rem"}}>
+					  <p className="apartment-details-description">
 						{apartment?.description}
 					  </p>
-                        <p>
+                        <p className="apartment-details-description">
                           <strong>Address:</strong>{" "}
                           {apartment.location +
                             ", " +
@@ -97,7 +97,7 @@ const Apartments = () => {
                             ", " +
                             apartment.location.state}
                         </p>
-                        <p>
+                        <p className="apartment-details-description">
                           <strong>Carpet Area:</strong>{" "}
                           {apartment.propertyDetails.dimensions +
                             ", " +

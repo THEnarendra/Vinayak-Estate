@@ -1,3 +1,10 @@
+.builderSection-heading h1{
+  font-size: 3rem;
+}
+.builderSection-heading p{
+  font-size: 1.2rem;
+  color: #555;
+}
 .carousel-item {
   padding: 20px 0;
 }
@@ -54,6 +61,17 @@
 }
 
 @media (max-width: 768px) {
+  .builderSection-heading h1{
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+  .builderSection-heading p{
+    font-size: 1.2rem;
+    color: #676767;
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
+
   .gradient-container {
     /* width: 95vw; */
     flex-direction: column;

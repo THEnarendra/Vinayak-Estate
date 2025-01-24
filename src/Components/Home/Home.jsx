@@ -17,12 +17,12 @@ const Home = () => {
     <div className="homeSection">
       <Header />
       <div className="carousel">
-        <h1 style={{ fontSize: "3rem" }}>
+        {/* <h1 style={{ fontSize: "3rem" }}>
           Projects in <span>Spotlight </span>
         </h1>
         <p style={{ color: "gray", fontSize: "1.4rem" }}>
           our premium projects
-        </p>
+        </p> */}
 
         <BuilderSlider />
 
@@ -61,20 +61,14 @@ const Home = () => {
           <Col
             lg={6}
             md={12}
-            className="d-flex flex-column justify-content-center text-start"
+            className="d-flex flex-column justify-content-center text-start luxury-interior-text-area"
             
           >
-            <h1
-              style={{
-                fontSize: "3rem",
-                fontWeight: "bold",
-                marginBottom: "1rem",
-              }}
-            >
+            <h1>
               Luxury <span>Interiors</span> 
             </h1>
-            <p style={{ fontSize: "1.2rem", color: "#555" }}>
-              At <strong>Your Company Name</strong>, we specialize in creating
+            <p>
+              At <strong>Vinayak Estate</strong>, we specialize in creating
               bespoke interior designs that redefine elegance and
               sophistication. Whether it’s a cozy residential haven or a vibrant
               commercial space, our expert team blends style, functionality, and

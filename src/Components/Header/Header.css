@@ -29,9 +29,13 @@
   z-index: -1;
 }
 
+.slider-container{
+  padding: 1% 5% 2% 5%;
+}
+
 .text-container {
   text-align: left;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
 }
 
 .text-container h1 {
@@ -67,9 +71,7 @@
   background-color: #0056b3;
 }
 
-.slider-container {
-  padding: 3%;
-}
+
 
 .slider-image img {
   width: 100%;
@@ -79,9 +81,25 @@
 }
 
 @media (max-width: 768px) {
+  .text-container h1{
+    font-size: 2rem;
+  }
+  .slider-container {
+    padding: 0% 5% 10% 5%;
+  }
+  
+  .text-container p {
+    font-size: 1rem;
+  }
+  .typing-effect {
+    font-size: 1.2rem;
+    display: inline;
+  }
+
+
   .slider-image img {
     max-height: 40vh;
-    padding: 1%;
+    /* padding: 1%; */
     object-fit: cover;
     border-radius: 8px;
   }

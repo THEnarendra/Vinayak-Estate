@@ -42,11 +42,14 @@ const BuilderSection = () => {
 
   return (
     <Container fluid>
-      {/* <Row>
-        <Col className="text-center">
-          <h2 className="section-title">Spotlight Properties</h2>
-        </Col>
-      </Row> */}
+      <Row className="builderSection-heading">
+      <h1>
+          Projects in <span>Spotlight </span>
+        </h1>
+        <p>
+          our premium projects
+        </p>
+      </Row>
       <Slider {...settings}>
         {spotlightProperties.map((builder) => (
           <div key={builder.id} className="carousel-item">
