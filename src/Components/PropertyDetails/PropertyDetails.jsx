@@ -39,6 +39,7 @@ export default function PropertyDetails() {
   const remainingCount = property?.images.length - 6;
 
   return (
+    <>
     <Container className="propertyDetails-page">
       <Row>
         <Col md={8}>
@@ -148,5 +149,10 @@ export default function PropertyDetails() {
         </Col>
       </Row>
     </Container>
+    <Container className="footer-container-unit">
+  <h2>Designed by Vinayak Dream Design </h2>
+  <h3>- a unit of Vinayak Estate</h3>
+</Container>
+    </>
   );
 }

@@ -85,3 +85,31 @@ hr {
   border: none;
   border-top: 1px solid #ddd;
 }
+
+
+/* Footer Container Styling */
+.footer-container-unit {
+  background: linear-gradient(135deg, #031725, #07283f); /* Slight gradient */
+  padding: 15px 30px; /* More padding */
+  text-align: center; /* Center text */
+  font-size: 18px; /* Slightly bigger text */
+  font-weight: 600; /* Make text stand out */
+  color: white; /* White text for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  width: 90%; /* Make it responsive */
+  max-width: 1200px; /* Prevent it from getting too large */
+  margin: 20px auto; /* Center it and add spacing */  
+  cursor: pointer;
+}
+.footer-container-unit:hover{
+  scale: 1.01;
+  transition: 0.5s;
+}
+
+.footer-container h2 {
+  font-size: 1.5rem; /* Slightly larger font size */
+  color: #6c757d; /* Subtle gray text color */
+  font-weight: 500; /* Medium font weight */
+  margin: 0; /* Remove default margin */
+}
