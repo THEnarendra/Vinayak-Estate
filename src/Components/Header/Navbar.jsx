@@ -14,7 +14,7 @@ export default function Navbar() {
     <>
       <nav>
         <div className="logo">
-          <a href="#!">Vinayak E-state</a>
+          <a href="/">Vinayak E-state</a>
         </div>
         <div className={menu ? "nav-links" : "nav-links show"}>
           <div className="nav-link">
@@ -34,16 +34,16 @@ export default function Navbar() {
           </div>
         </div>
         <div className="social-icons">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/vinayak_estate/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-instagram"></i>
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-twitter"></i>
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          </a> */}
+          {/* <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+          </a> */}
+          <a href="https://www.youtube.com/@vinayakestate" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-youtube"></i>
           </a>
         </div>
