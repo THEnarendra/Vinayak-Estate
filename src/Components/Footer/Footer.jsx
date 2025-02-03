@@ -44,8 +44,7 @@ const Footer = () => {
 									<h2 className='text-light'>Vinayak E-state</h2>
 								</div>
 								<div class="footer-text">
-									<p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-										elit,Lorem ipsum dolor sit amet.</p>
+									<p>We Vinayak Estate are a well established company since 2016 and we do from Planning to Development of your Dream Property.</p>
 								</div>
 								<div class="footer-social-icon">
 									<span>Follow us</span>
@@ -64,9 +63,9 @@ const Footer = () => {
 									<li><a href="/">Home</a></li>
 									<li><a href="/aboutus">about</a></li>
 									<li><a href="/services">services</a></li>
-									<li><a href="#">Contact</a></li>
-									<li><a href="#">About us</a></li>
-									<li><a href="#">Contact us</a></li>
+									{/* <li><a href="#">Contact</a></li> */}
+									{/* <li><a href="#">About us</a></li> */}
+									<li><a href="/services">Our Services</a></li>
 								</ul>
 							</div>
 						</div>
