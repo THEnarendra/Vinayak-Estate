@@ -32,20 +32,15 @@ export default function Navbar() {
               Our Services
             </Link>
           </div>
-        </div>
-        <div className="social-icons">
-          <a href="https://www.instagram.com/vinayak_estate/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i>
-          </a>
-          {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-twitter"></i>
-          </a> */}
-          {/* <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-linkedin"></i>
-          </a> */}
-          <a href="https://www.youtube.com/@vinayakestate" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-youtube"></i>
-          </a>
+          {/* Social Icons - Only once, inside the nav-links */}
+          <div className="social-icons">
+            <a href="https://www.instagram.com/vinayak_estate/" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@vinayakestate" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-youtube"></i>
+            </a>
+          </div>
         </div>
         <div className={menu ? "toggler" : "toggler close"} onClick={showMenu}>
           <div className="btn-line"></div>
