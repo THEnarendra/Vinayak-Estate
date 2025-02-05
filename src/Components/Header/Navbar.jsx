@@ -32,6 +32,11 @@ export default function Navbar() {
               Our Services
             </Link>
           </div>
+          <div className="nav-link">
+            <Link to="/blog" onClick={() => showMenu()}>
+              Blogs
+            </Link>
+          </div>
           {/* Social Icons - Only once, inside the nav-links */}
           <div className="social-icons">
             <a href="https://www.instagram.com/vinayak_estate/" target="_blank" rel="noopener noreferrer">
