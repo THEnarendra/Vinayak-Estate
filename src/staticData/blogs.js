@@ -1,8 +1,9 @@
-import image1 from "../img/builder.png";
-import image2 from "../img/builder.png";
-import image3 from "../img/builder.png";
-import image4 from "../img/builder.png";
-import image5 from "../img/builder.png";
+import image1 from "../img/blog1.jpg";
+import image2 from "../img/blog2.jpg";
+import image3 from "../img/blog3.jpg";
+import image4 from "../img/blog4.jpg";
+import image5 from "../img/blog5.jpg";
+
 
 const blogs = [
   {
