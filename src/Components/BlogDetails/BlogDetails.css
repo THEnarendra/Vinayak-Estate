@@ -1,0 +1,82 @@
+/* BlogDetails.css */
+
+/* Page styling */
+.blog-details {
+  max-width: 85vw;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  margin-top: 5rem;
+}
+
+/* Blog title */
+.blog-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Blog Image */
+.blog-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Meta information */
+.blog-meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Blog content styling */
+.blog-content {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.8;
+}
+
+/* Headings inside the blog */
+.blog-content h3 {
+  font-size: 22px;
+  color: #2c3e50;
+  margin-top: 20px;
+}
+
+/* Paragraphs */
+.blog-content p {
+  margin-bottom: 15px;
+}
+
+/* Lists */
+.blog-content ul {
+  padding-left: 20px;
+}
+
+.blog-content li {
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-details {
+    padding: 15px;
+  }
+
+  .blog-title {
+    font-size: 24px;
+  }
+
+  .blog-content {
+    font-size: 16px;
+  }
+}

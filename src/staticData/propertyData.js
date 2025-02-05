@@ -87,8 +87,7 @@ const VillasData = [
   
 ];
 
-const FlatsData = [
-];
+const FlatsData = [];
 
 const LandData = [];
 
