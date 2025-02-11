@@ -54,7 +54,7 @@ export default function Navbar() {
         </div>
       </nav>
       <a
-        href="https://wa.me/7568161580"
+        href="https://wa.me/9660225994"
         className="whatsapp-icon"
         target="_blank"
         rel="noopener noreferrer"

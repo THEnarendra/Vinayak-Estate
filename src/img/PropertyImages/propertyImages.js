@@ -36,13 +36,37 @@ import v3_2 from './v3.2.jpg';
 import v3_3 from './v3.3.jpg';
 import v3_4 from './v3.4.jpg';
 import v3_5 from './v3.5.jpg';
-import v3_6 from './v3.6.jpg';
-import v3_7 from './v3.7.jpg';
+import v3_6 from './v3.6.jpeg';
+import v3_7 from './v3.7.jpeg';
+import v3_8 from './v3.8.jpeg';
+import v3_9 from './v3.9.jpg';
+import v3_10 from './v3.10.jpg';
+import v3_11 from './v3.11.jpg';
+import v3_12 from './v3.12.jpg';
+import v3_13 from './v3.13.jpg';
+
+// villa4
+import v4_1 from './v4.1.jpeg';
+import v4_2 from './v4.2.jpeg';
+import v4_3 from './v4.3.jpeg';
+import v4_4 from './v4.4.jpeg';
+import v4_5 from './v4.5.jpeg';
+import v4_6 from './v4.6.jpg';
+import v4_7 from './v4.7.jpg';
+import v4_8 from './v4.8.jpg';
+import v4_9 from './v4.9.jpg';
+import v4_10 from './v4.10.jpg';
+import v4_11 from './v4.11.jpg';
+import v4_12 from './v4.12.jpg';
+import v4_13 from './v4.13.jpg';
+import v4_14 from './v4.14.jpg';
+import v4_15 from './v4.15.jpg';
+import v4_16 from './v4.16.jpg';
 
 
 
 export const home_slider = {
-  v1_1, v2_1
+  v1_1, v2_1, v3_1, v4_1
 };
 export const villa1 = {
     v1_1, v1_2, v1_3, v1_4, v1_5, v1_6, v1_7, v1_8, v1_9, v1_10,
@@ -55,8 +79,14 @@ export const villa2 = {
   };
 
 export const villa3 = {
-  v3_1, v3_2, v3_3, v3_4, v3_5, v3_6, v3_7
+  v3_1, v3_2, v3_3, v3_4, v3_5, v3_6, v3_7, v3_8, v3_9, v3_10, v3_11, v3_12, v3_13
 };
+
+export const villa4 = {
+  v4_1, v4_2, v4_3, v4_4, v4_5, v4_6, v4_7, v4_8, v4_9, v4_10, v4_11, v4_12, v4_13, v4_14, v4_15, v4_16
+};
+
+
 
 export const interiorImg = {
   v1_3, v2_5, v1_12, v3_4, v3_2 
