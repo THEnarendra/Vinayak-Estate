@@ -3,6 +3,10 @@ import image2 from "../img/blog2.jpg";
 import image3 from "../img/blog3.jpg";
 import image4 from "../img/blog4.jpg";
 import image5 from "../img/blog5.jpg";
+import image6 from "../img/blog6.jpg";
+import image7 from "../img/blog7.png";
+import image8 from "../img/blog8.png";
+import image9 from "../img/blog9.jpg";
 
 
 const blogs = [
@@ -144,6 +148,146 @@ const blogs = [
     image: image5,
     slug: "renting-vs-buying-home-in-india",
   },
+  {
+    id: 6,
+    title: "Top 10 Smart Home Features to Look for in 2025",
+    content: `
+      <p>Technology is rapidly transforming the real estate industry, and smart homes are the future. Here are the top 10 must-have smart home features in 2025.</p>
+  
+      <h3>1. Smart Security Systems</h3>
+      <p>AI-powered security cameras, smart locks, and motion sensors ensure complete safety.</p>
+  
+      <h3>2. Voice-Controlled Assistants</h3>
+      <p>Smart home hubs like Alexa and Google Home can control lighting, temperature, and even appliances.</p>
+  
+      <h3>3. Solar Power Integration</h3>
+      <p>With rising energy costs, solar panels and smart energy management systems are a must.</p>
+  
+      <h3>4. Automated Lighting</h3>
+      <p>Motion-sensor lights and smart bulbs that adjust brightness automatically enhance convenience and save energy.</p>
+  
+      <h3>5. Smart Thermostats</h3>
+      <p>Control your home temperature remotely with AI-driven thermostats that learn your preferences.</p>
+  
+      <h3>6. Home Automation Apps</h3>
+      <p>One app to control all smart devices, from doorbells to appliances, makes life easier.</p>
+  
+      <h3>7. Smart Kitchens</h3>
+      <p>Refrigerators that notify you about groceries, voice-controlled ovens, and automated coffee makers.</p>
+  
+      <h3>8. High-Speed WiFi & Mesh Networks</h3>
+      <p>Fast and uninterrupted internet for remote work and smart home connectivity.</p>
+  
+      <h3>9. AI-Powered Cleaning Robots</h3>
+      <p>Vacuum robots and self-cleaning gadgets help maintain a spotless home effortlessly.</p>
+  
+      <h3>10. Smart Water Management</h3>
+      <p>Leak detectors, automated irrigation systems, and water purifiers with AI analytics help conserve water.</p>
+  
+      <h3>Conclusion:</h3>
+      <p>Smart homes are no longer a luxury but a necessity in 2025. Investing in properties with smart features can significantly increase their value.</p>
+    `,
+    author: "Vinayak E-state",
+    date: "05-02-2025",
+    image: image6,
+    slug: "smart-home-features-2025",
+  },
+  {
+    id: 7,
+    title: "Best Locations to Invest in Real Estate in India (2025 Edition)",
+    content: `
+      <p>Investing in real estate is all about choosing the right location. Here are the best places in India to invest in property in 2025.</p>
+  
+      <h3>1. Bengaluru – The IT Hub</h3>
+      <p>With growing IT parks and employment opportunities, Bengaluru remains the top choice for property investors.</p>
+  
+      <h3>2. Hyderabad – Rapid Growth & Affordable Prices</h3>
+      <p>The city is witnessing a real estate boom with high rental yields and new infrastructure projects.</p>
+  
+      <h3>3. Pune – Best for Residential Investment</h3>
+      <p>Great connectivity, booming IT sector, and a pleasant climate make Pune ideal for homebuyers.</p>
+  
+      <h3>4. Mumbai – The Financial Capital</h3>
+      <p>Despite high prices, areas like Navi Mumbai and Thane offer great investment opportunities.</p>
+  
+      <h3>5. Jaipur – Emerging Real Estate Market</h3>
+      <p>With new highways, metro expansion, and luxury housing projects, Jaipur is a promising investment hub.</p>
+  
+      <h3>6. Ahmedabad – Growing Commercial Hub</h3>
+      <p>Affordable property prices and business-friendly policies make Ahmedabad a smart choice.</p>
+  
+      <h3>7. Chennai – Strong Rental Market</h3>
+      <p>Chennai has a high rental demand, especially in areas near IT corridors and industrial zones.</p>
+  
+      <h3>Conclusion:</h3>
+      <p>If you’re planning to invest in real estate in 2025, these cities offer the best returns. Choose based on your budget and investment goals.</p>
+    `,
+    author: "Vinayak E-state",
+    date: "10-02-2025",
+    image: image7,
+    slug: "best-locations-invest-real-estate-india",
+  },
+  {
+    id: 8,
+    title: "Hidden Costs of Buying a Home in India",
+    content: `
+      <p>Buying a home is not just about the property price. Here are some hidden costs that every homebuyer in India should be aware of.</p>
+  
+      <h3>1. Registration & Stamp Duty</h3>
+      <p>Depending on the state, this can be **5-7%** of the property cost.</p>
+  
+      <h3>2. GST on Under-Construction Properties</h3>
+      <p>If you’re buying an under-construction home, you may need to pay **5% GST**.</p>
+  
+      <h3>3. Home Loan Processing Fees</h3>
+      <p>Banks charge **0.5% to 1%** of the loan amount as processing fees.</p>
+  
+      <h3>4. Property Maintenance Charges</h3>
+      <p>Society maintenance fees, security charges, and clubhouse fees can add up.</p>
+  
+      <h3>5. Interior & Furniture Costs</h3>
+      <p>Furnishing your home can cost anywhere from ₹3 lakh to ₹20 lakh, depending on the size.</p>
+  
+      <h3>6. Parking Charges</h3>
+      <p>Many societies charge additional fees for covered parking spaces.</p>
+  
+      <h3>Conclusion:</h3>
+      <p>Always calculate these hidden costs before finalizing a home purchase. Proper budgeting can save you from financial surprises.</p>
+    `,
+    author: "Vinayak E-state",
+    date: "15-02-2025",
+    image: image8,
+    slug: "hidden-costs-buying-home-india",
+  },
+  {
+    id: 9,
+    title: "Why Villas Are Becoming More Popular Than Apartments in India",
+    content: `
+      <p>Villas are gaining popularity in India. Let’s explore why more homebuyers prefer villas over apartments.</p>
+  
+      <h3>1. More Space & Privacy</h3>
+      <p>Unlike apartments, villas offer **independent living** with more space and privacy.</p>
+  
+      <h3>2. Higher Property Appreciation</h3>
+      <p>Villas appreciate better in value compared to apartments over time.</p>
+  
+      <h3>3. Customization Options</h3>
+      <p>You can design and modify villas according to your preferences.</p>
+  
+      <h3>4. Better Amenities</h3>
+      <p>Most villas come with **private gardens, terraces, and personal parking**.</p>
+  
+      <h3>5. Pandemic Effect</h3>
+      <p>COVID-19 increased demand for independent homes with open spaces.</p>
+  
+      <h3>Conclusion:</h3>
+      <p>While apartments are budget-friendly, villas offer a **luxurious and independent lifestyle** with better long-term value.</p>
+    `,
+    author: "Vinayak E-state",
+    date: "20-02-2025",
+    image: image9,
+    slug: "why-villas-popular-over-apartments",
+  }
 ];
 
 export default blogs;
