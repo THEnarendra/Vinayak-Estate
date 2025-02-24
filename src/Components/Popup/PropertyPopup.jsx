@@ -28,7 +28,7 @@ const PropertyPopup = ({ isOpen, onClose, image, name, price, contactInfo, id, p
             </div>
           )}
         </div>
-        <button onClick={handleViewMoreDetails}>View more details...</button>
+        <button className="view-more-btn" onClick={handleViewMoreDetails}>View more details...</button>
       </div>
     </div>
   );

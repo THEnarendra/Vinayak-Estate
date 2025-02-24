@@ -3,7 +3,8 @@
 /* Overlay styling */
 .popup-overlay {
   position: fixed;
-  top: 20%;
+  height: 95vh;
+  top: 8%;
   left: 0;
   right: 0;
   bottom: 20%;
@@ -56,4 +57,10 @@
 
 .contact-info p {
   margin: 5px 0;
+}
+
+.view-more-btn{
+  background: none;
+  border: none;
+  color: #4e00b7;
 }
