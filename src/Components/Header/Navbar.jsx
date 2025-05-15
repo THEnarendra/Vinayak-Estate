@@ -4,63 +4,45 @@ import "./Navbar.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export default function Navbar() {
-  const [menu, setMenu] = useState(true);
-
-  const showMenu = () => {
-    setMenu(!menu);
-  };
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <>
-      <nav>
-        <div className="logo">
-          <a href="/">Vinayak E-state</a>
+    <nav className="navbar">
+      {/* Logo */}
+      <div className="logo">
+        <Link to="/">Vinayak E-state</Link>
+      </div>
+
+      {/* Desktop Navigation */}
+      <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <div className="main-links">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/aboutus" className="nav-link">About</Link>
+          <Link to="/services" className="nav-link">Our Services</Link>
+          <Link to="/blog" className="nav-link">Blogs</Link>
+          <Link to="/contact" className="nav-link">Contact</Link>
         </div>
-        <div className={menu ? "nav-links" : "nav-links show"}>
-          <div className="nav-link">
-            <Link to="/" onClick={() => showMenu()}>
-              Home
-            </Link>
-          </div>
-          <div className="nav-link">
-            <Link to="/aboutus" onClick={() => showMenu()}>
-              About
-            </Link>
-          </div>
-          <div className="nav-link">
-            <Link to="/services" onClick={() => showMenu()}>
-              Our Services
-            </Link>
-          </div>
-          <div className="nav-link">
-            <Link to="/blog" onClick={() => showMenu()}>
-              Blogs
-            </Link>
-          </div>
-          {/* Social Icons - Only once, inside the nav-links */}
-          <div className="social-icons">
-            <a href="https://www.instagram.com/vinayak_estate/" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.youtube.com/@vinayakestate" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-youtube"></i>
-            </a>
-          </div>
+
+        {/* Social Icons */}
+        <div className="social-icons">
+          <a href="https://www.instagram.com/vinayak_estate/" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/@vinayakestate" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-youtube"></i>
+          </a>
         </div>
-        <div className={menu ? "toggler" : "toggler close"} onClick={showMenu}>
-          <div className="btn-line"></div>
-          <div className="btn-line"></div>
-          <div className="btn-line"></div>
-        </div>
-      </nav>
-      <a
-        href="https://wa.me/9660225994"
-        className="whatsapp-icon"
-        target="_blank"
-        rel="noopener noreferrer"
+      </div>
+
+      {/* Mobile Toggle */}
+      <div 
+        className={`hamburger ${menuOpen ? "active" : ""}`} 
+        onClick={() => setMenuOpen(!menuOpen)}
       >
-        <i className="fab fa-whatsapp"></i>
-      </a>
-    </>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
   );
 }

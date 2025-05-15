@@ -1,92 +1,170 @@
 /* BlogPage.css */
-
 .blog-container {
-  max-width: 85vw;
-  margin: auto;
-  padding: 20px;
-  font-family: "Poppins", sans-serif;
-  margin-top: 5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  font-family: var(--font-body);
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
+.section-heading {
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--textColor);
+}
+
+.section-heading .text-primary {
+  color: var(--primaryColor) !important;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--secondaryTextColor);
 }
 
 .blog-card {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 20px;
-  transition: transform 0.2s ease-in-out;
+  border-radius: 12px;
+  box-shadow: var(--mainShadow);
+  transition: var(--mainTransition);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.blog-image-container {
+  position: relative;
+  overflow: hidden;
 }
 
 .blog-image {
   width: 100%;
-  max-height: 200px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image {
+  transform: scale(1.05);
+}
+
+.blog-date-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--primaryColor);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.blog-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-title-link {
   text-decoration: none;
-  color: #333;
-  font-size: 22px;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 10px;
 }
 
-.blog-content {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 10px;
+.blog-title {
+  font-size: 1.4rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--textColor);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
 }
 
-.blog-meta {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 10px;
+.blog-title:hover {
+  color: var(--primaryColor);
 }
 
-/* .read-more-button {
-  display: inline-block;
-  padding: 8px 15px;
-  background-color: #6200ea;
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  border-radius: 5px;
-  transition: background 0.3s ease-in-out;
+.blog-excerpt {
+  font-size: 1rem;
+  color: var(--secondaryTextColor);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
-.read-more-button:hover {
-  background-color: #4500b5;
-} */
+.blog-author {
+  font-size: 0.9rem;
+  color: var(--secondaryTextColor);
+}
 
 .read-more-button {
-  display: block; /* Make it a block element */
-  width: fit-content; /* Adjust width to content */
-  margin: 10px auto; /* Center align */
-  padding: 10px 20px;
-  background-color: #6200ea;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: var(--primaryColor);
   color: white;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s ease-in-out;
-  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: var(--mainTransition);
 }
 
 .read-more-button:hover {
-  background-color: #4500b5;
+  background-color: #4a00b5;
+  color: white;
+  transform: translateX(5px);
 }
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .blog-image {
+    height: 200px;
+  }
+  
+  .blog-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-heading {
+    font-size: 2.2rem;
+  }
+  
+  .blog-excerpt {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+    padding: 3rem 0;
+  }
+  
+  .section-heading {
+    font-size: 2rem;
+  }
+  
+  .blog-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-container {
+    padding: 2rem 0;
+  }
+  
+  .section-heading {
+    font-size: 1.8rem;
+  }
+  
+  .blog-card {
+    margin-bottom: 1.5rem;
+  }
+}

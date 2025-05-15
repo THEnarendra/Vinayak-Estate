@@ -1,4 +1,9 @@
-
+.homeSection{
+    margin: 0;
+    position: relative;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
 .yourSwiper{
     height: 65vh;
     width: 26vw;
@@ -13,7 +18,7 @@
     
 }
 .luxury-interior-text-area h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }

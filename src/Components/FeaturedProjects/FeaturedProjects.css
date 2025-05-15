@@ -1,67 +1,207 @@
-.featured-collections h1 {
-  font-size: 3rem;
-}
-.featured-collections h1 span {
-  font-size: 3rem;
-  color: #6200ea;
-}
-.para2 {
-  margin-top: -10px;
-  margin-bottom: -15px;
-  font-size: 1.4rem;
-}
-.collection-card {
-  padding: 20px 20px;
+/* FeaturedProjects.css */
+.featured-projects {
+  margin: 4rem auto;
+  max-width: 90vw;
+  width: 100%;
 }
 
-.slick-arrow {
-  z-index: 1000;
+.section-heading-featured-projects {
+  font-size: 2.25rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--textColor);
+  margin-bottom: 0;
+  letter-spacing: -0.5px;
+}
+
+.section-heading-featured-projects span {
+  color: var(--primaryColor);
+  font-weight: 700;
+}
+
+.section-subtitle-featured {
+  font-size: 1.1rem;
+  color: var(--secondaryTextColor);
+  font-weight: 400;
+  margin-bottom: -1rem;
+}
+
+.projects-slider {
+  position: relative;
+}
+
+.projects-slider-row{
+  padding-top: .8rem;
+  padding-bottom: 1.5rem;  
+}
+
+.project-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  margin: 0 auto;
+  height: 300px;
+}
+
+.project-image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.project-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 2;
   color: white;
-  border-radius: 50%;
-  height: 40px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: -0.25rem;
+  font-family: var(--font-heading);
+  color: white;
+}
+
+.project-description {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.9;
+  color: antiquewhite;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Slider Navigation */
+.slick-arrow {
+  z-index: 1;
   width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
   display: flex !important;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  transition: var(--mainTransition);
 }
+
+.slick-arrow:before {
+  color: var(--primaryColor);
+  font-size: 1.5rem;
+  opacity: 1;
+}
+
 .slick-prev {
-  left: -40px;
+  left: -10px;
 }
+
 .slick-next {
-  right: -40px;
+  right: -10px;
 }
+
 .slick-arrow:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--primaryColor);
+}
+
+.slick-arrow:hover:before {
+  color: white;
+}
+
+.slick-dots {
+  bottom: -30px;
 }
 
 .slick-dots li button:before {
-  color: #000;
+  color: var(--secondaryTextColor);
+  font-size: 10px;
 }
 
 .slick-dots li.slick-active button:before {
-  color: #000;
+  color: var(--primaryColor);
 }
 
-.collection-card .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .project-card {
+    height: 320px;
+  }
 }
 
-.collection-card .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+@media (max-width: 992px) {
+  .section-heading-featured-projects {
+    font-size: 2.2rem;
+  }
+  
+  .project-card {
+    height: 300px;
+  }
 }
 
 @media (max-width: 768px) {
-  .featured-collections h1 {
+  .section-heading-featured-projects {
     font-size: 2rem;
-    font-weight: bold;
   }
-  .featured-collections h1 span {
-    font-size: 2.2rem;
-    color: #6200ea;
+
+  .section-subtitle-featured {
+    font-size: .85rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
   }
-  .featured-collections p {
-    font-size: 1.2rem;
+  
+  .project-card {
+    height: 280px;
+  }
+  
+  .project-title {
+    font-size: 1.3rem;
+    color: white !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .featured-projects {
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  
+  .section-heading-featured-projects {
+    font-size: 1.6rem;
+  }
+
+  .section-subtitle-featured {
+    font-size: .85rem;
+    margin-top: -1rem;
+    margin-bottom: -2rem;
+  }
+  
+  .project-card {
+    height: 250px;
+  }
+  
+  .slick-prev {
+    left: 0;
+  }
+  
+  .slick-next {
+    right: 0;
   }
 }

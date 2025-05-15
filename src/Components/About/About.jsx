@@ -1,119 +1,108 @@
 import React from "react";
 import CountUp from "react-countup";
-import "./About.css";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import floorplan from '../../img/floorplan.png'
-import  interiorImg  from "../../img/PropertyImages/v1.11.jpg";
+import "./About.css";
+import floorplan from '../../img/floorplan.png';
+import interiorImg from "../../img/PropertyImages/v1.11.jpg";
 import elevation from "../../img/PropertyImages/v2.1.jpg";
 
 const About = () => {
   return (
-    <>
-      <Row className="about" id="about">
-        <Col className="company">
-          <h2 className="heading">Vinayak Estate</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            vitae nam a! Consequatur ut veniam iste, temporibus eveniet
-            repudiandae quia! Animi quo expedita molestiae deleniti soluta in
-            saepe beatae a est. Enim inventore itaque ea voluptas quibusdam
-            dolore esse dignissimos?
+    <Container fluid className="about-page px-lg-5 px-md-3 px-2">
+      {/* About Company Section */}
+      <Row className="about-section align-items-center my-5 py-4">
+        <Col lg={6} md={12} className="company-info pe-lg-5">
+          <h2 className="section-heading-about mb-4">
+            About <span>Vinayak Estate</span>
+          </h2>
+          <p className="company-description">
+            Established in 2016, Vinayak Estate has been transforming Rajasthan's real estate landscape with innovative property solutions. Our team combines local expertise with modern approaches to deliver exceptional results.
           </p>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            vitae nam a! Consequatur ut veniam iste, temporibus eveniet
-            repudiandae quia! Animi quo expedita molestiae deleniti soluta in
-            saepe beatae a est. Enim inventore itaque ea voluptas quibusdam
-            dolore esse dignissimos?
+          <p className="company-description">
+            From residential complexes to commercial spaces, we handle every aspect of property development - planning, construction, and interior design - ensuring each project reflects our commitment to quality and customer satisfaction.
           </p>
         </Col>
-        <Col className="stats">
-          <div className="apartments">
-            <p>
-              <CountUp start={0} end={784} duration={2.5} />
-              <br /> Apartments
-            </p>
-          </div>
-          <div className="clients">
-            <p>
-              <CountUp start={0} end={3854} duration={2.5} />
-              <br /> Clients
-            </p>
-          </div>
-          <div className="employees">
-            <p>
-              <CountUp start={0} end={24} duration={2.5} />
-              <br /> Employees
-            </p>
-          </div>
-          <div className="awards">
-            <p>
-              <CountUp start={0} end={14} duration={2.5} />
-              <br /> Awards
-            </p>
-          </div>
+
+        <Col lg={6} md={12} className="stats-section mt-4 mt-lg-0">
+          <Row className="g-3">
+            <Col md={6} sm={6} xs={6}>
+              <div className="stat-card">
+                <CountUp start={0} end={784} duration={2.5} className="stat-number" />
+                <p className="stat-label">Apartments</p>
+              </div>
+            </Col>
+            <Col md={6} sm={6} xs={6}>
+              <div className="stat-card">
+                <CountUp start={0} end={3854} duration={2.5} className="stat-number" />
+                <p className="stat-label">Clients</p>
+              </div>
+            </Col>
+            <Col md={6} sm={6} xs={6}>
+              <div className="stat-card">
+                <CountUp start={0} end={24} duration={2.5} className="stat-number" />
+                <p className="stat-label">Employees</p>
+              </div>
+            </Col>
+            <Col md={6} sm={6} xs={6}>
+              <div className="stat-card">
+                <CountUp start={0} end={14} duration={2.5} className="stat-number" />
+                <p className="stat-label">Awards</p>
+              </div>
+            </Col>
+          </Row>
         </Col>
       </Row>
 
-
-
-
-
-
-
-      <Container fluid className="vinayak-dream-design">
-      <Row className="text-center mb-4">
-        <Col>
-        <h1 className="our-enterprises" style={{ fontSize: "3rem" }}>
-          Our <span>Enterprises </span>
-        </h1>
-          <h2 className="section-title">Vinayak Dream Design</h2>
-          <p className="section-subtitle">
-            A proud unit of <strong>Vinayak Estate</strong>, offering premium architectural and interior design solutions to make your dream property a reality.
+      {/* Vinayak Dream Design Section */}
+      <Row className="design-section text-center my-5 py-4">
+        <Col xs={12} className="mb-4">
+          <h2 className="section-heading-about mb-3">
+            Our <span>Enterprises</span>
+          </h2>
+          <p className="section-subtitle-about mb-0">
+            A proud unit of <strong>Vinayak Estate</strong>, offering premium architectural and interior design solutions
           </p>
         </Col>
-      </Row>
 
-      <Row className="services-section">
-        <Col md={4} sm={12} className="mb-4">
-          <Card className="service-card">
-            <Card.Img variant="top" src={interiorImg} alt="Interior Work" />
-            <Card.Body>
-              <Card.Title>Interior Work</Card.Title>
-              <Card.Text>
-                Transform your space with modern, luxurious, and functional interiors tailored to your style.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
+        <Row className="services-row g-4">
+          <Col lg={4} md={6} sm={12}>
+            <Card className="service-card h-100">
+              <Card.Img variant="top" src={interiorImg} alt="Interior Design Services" />
+              <Card.Body>
+                <Card.Title className="service-title-about">Interior Design</Card.Title>
+                <Card.Text className="service-description">
+                  Custom interior solutions blending aesthetics with functionality, from concept to completion.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
 
-        <Col md={4} sm={12} className="mb-4">
-          <Card className="service-card">
-            <Card.Img variant="top" src={floorplan} alt="Floor Plan" />
-            <Card.Body>
-              <Card.Title>Floor Plan</Card.Title>
-              <Card.Text>
-                Design efficient and innovative layouts to make the most of your space.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
+          <Col lg={4} md={6} sm={12}>
+            <Card className="service-card h-100">
+              <Card.Img variant="top" src={floorplan} alt="Floor Plan Services" />
+              <Card.Body>
+                <Card.Title className="service-title-about">Space Planning</Card.Title>
+                <Card.Text className="service-description">
+                  Optimized floor plans that maximize space utilization and enhance living experiences.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
 
-        <Col md={4} sm={12} className="mb-4">
-          <Card className="service-card">
-            <Card.Img variant="top" src={elevation} alt="Elevation"/>
-            <Card.Body>
-              <Card.Title>Elevation</Card.Title>
-              <Card.Text>
-                Create striking elevations to give your property an eye-catching exterior look.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
+          <Col lg={4} md={6} sm={12}>
+            <Card className="service-card h-100">
+              <Card.Img variant="top" src={elevation} alt="Building Elevation Services" />
+              <Card.Body>
+                <Card.Title className="service-title-about">Building Elevation</Card.Title>
+                <Card.Text className="service-description">
+                  Striking exterior designs that create lasting impressions and enhance property value.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
       </Row>
     </Container>
-    </>
   );
 };
 

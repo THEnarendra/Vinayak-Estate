@@ -1,0 +1,161 @@
+/* Luxury Interiors Section */
+.luxury-interiors-section {
+    background: linear-gradient(135deg, #f2e4ff 0%, #ffffff 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 4rem auto;
+    max-width: 90vw;
+  }
+  
+  .luxury-swiper-col {
+    padding: 2rem;
+  }
+  
+  .luxury-swiper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3%;
+  }
+  
+  .swiper-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    /* padding: 3%; */
+  }
+  
+  .swiper-image {
+    max-width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+  }
+  
+  .luxury-swiper:hover .swiper-image {
+    transform: scale(1.02);
+  }
+  
+  .luxury-content-col {
+    padding: 3rem;
+  }
+  
+  .luxury-content {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .luxury-heading {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+  }
+  
+  .luxury-heading span {
+    color: var(--primaryColor);
+  }
+  
+  .luxury-divider {
+    width: 80px;
+    height: 4px;
+    background: var(--primaryColor);
+    margin: 1.5rem 0;
+    border-radius: 2px;
+  }
+  
+  .luxury-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--secondaryTextColor);
+    margin-bottom: 1rem;
+  }
+  
+  .luxury-cta {
+    background-color: var(--primaryColor);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: .8rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .luxury-cta:hover {
+    background-color: #4500b5;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .luxury-swiper {
+      height: 350px;
+    }
+    
+    .luxury-content-col {
+      padding: 2rem;
+    }
+    
+    .luxury-heading {
+      text-align: center;
+    }
+    
+    .luxury-divider {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .luxury-cta {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .luxury-swiper {
+      height: 300px;
+    }
+    
+    .luxury-heading {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .luxury-interiors-section {
+      margin: 2rem auto;
+    }
+    
+    .luxury-swiper {
+      height: 250px;
+    }
+
+    .luxury-content-col {
+      padding: 1rem;
+    }
+    
+    .luxury-heading {
+      font-size: 1.8rem;
+      margin-bottom: -1rem;
+    }
+    
+    .luxury-cta {
+      width: 100%;
+      justify-content: center;
+      font-size: .8rem;
+    }
+
+    .luxury-text {
+      font-size: 0.9rem;
+    }
+  }

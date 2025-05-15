@@ -21,11 +21,11 @@ const Apartments = () => {
   const { id } = useParams();
 
   const apartments =
-    id === "Lands"
+    id === "lands"
       ? propertyData.LandData
-      : id === "Villas"
+      : id === "villas"
       ? propertyData.VillasData
-      : id === "Farm Houses"
+      : id === "farm-houses"
       ? propertyData.FarmHouseData
       : propertyData.FlatsData;
 
@@ -35,18 +35,13 @@ const Apartments = () => {
 
   return (
     <Container fluid className="apartments-page">
-      <Row className="mb-3 align-items-center">
-        <Col className="apartments-page-header">
+      <Row className="mb-3 align-items-center apartments-page-header">
+        <Col>
           <h4>
             {apartments.length} results || <span>{id}</span> for Sale in Jaipur
           </h4>
           <p>Explore Luxury {id} in Jaipur.</p>
         </Col>
-        {/* <Col xs="auto">
-          <Button variant="outline-primary" size="sm">
-            Add Localities for more relevant results →
-          </Button>
-        </Col> */}
       </Row>
 
       {apartments.length === 0 ? (
@@ -70,13 +65,12 @@ const Apartments = () => {
                         })`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
-						objectFit:"contain",
                         borderRadius: "8px",
-						width:"100%",
-						height:"15rem"
+                        width: "100%",
+                        height: "15rem"
                       }}
                     >
-                      {/* <span className="badge bg-dark">16 Dec 2024</span> */}
+                      <span className="badge bg-dark">{id}</span>
                     </div>
                   </Col>
 
@@ -86,25 +80,26 @@ const Apartments = () => {
                     </h5>
                     <Row className="my-2">
                       <Col>
-					  <p className="apartment-details-description">
-						{apartment?.description}
-					  </p>
                         <p className="apartment-details-description">
-                          <strong>Address:</strong>{" "}
-                          {apartment.location +
-                            ", " +
-                            apartment.location.city +
-                            ", " +
-                            apartment.location.state}
+                          {apartment?.description}
                         </p>
                         <p className="apartment-details-description">
-                          <strong>Carpet Area:</strong>{" "}
-                          {apartment.propertyDetails.dimensions +
-                            ", " +
-                            apartment.propertyDetails.size}
+                          <strong>Address:</strong>{" "}
+                          {apartment.location}
+                        </p>
+                        <p className="apartment-details-description">
+                          <strong>Size:</strong>{" "}
+                          {apartment.propertyDetails.size}
                         </p>
                       </Col>
                     </Row>
+                    {/* <Button 
+                      variant="primary" 
+                      className="apartment-actions"
+                      onClick={() => handleNavigate(apartment.id)}
+                    >
+                      View Details
+                    </Button> */}
                   </Col>
                 </Row>
               </Card>

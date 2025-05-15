@@ -9,6 +9,7 @@ import Apartments from "./Components/Apartments/Apartments";
 import PropertyDetails from "./Components/PropertyDetails/PropertyDetails";
 import BlogPage from "./Components/BlogPage/BlogPage";
 import BlogDetails from "./Components/BlogDetails/BlogDetails";
+import ContactUs from "./Components/ContactUs/ContactUs";
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/aboutus" element={<About />} />
+				<Route path="/contact" element={<ContactUs />} />
 				<Route path="/services" element={<Services />} />
 				<Route path="/:id" element={<Apartments />} />
 				<Route path="/:route/:id" element={<PropertyDetails />} />

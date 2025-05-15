@@ -1,11 +1,15 @@
+/* Import these fonts in your HTML head or use @import in CSS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@500;600;700&display=swap');
+
 :root {
-	--primaryColor: #4e00b7;
-	--textColor: #212f3d;
+	--font-heading: 'Montserrat', sans-serif;
+	--font-body: 'Lato', sans-serif;
+	--primaryColor: #6200ea;
+	--textColor: #2c3e50;
+	--secondaryTextColor: #7f8c8d;
 	--mainTransition: all 0.3s ease-in-out;
-	--mainBack: #d7dbdd;
-	--mainShadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	--font-heading: 'Poppins', sans-serif;
-	--font-body: 'Roboto', sans-serif;
+	--mainBack: #f5f6fa;
+	--mainShadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 * {
@@ -14,250 +18,169 @@
 	box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
+	font-family: var(--font-body);
+	color: var(--textColor);
+	background-color: #fff;
 	overflow-x: hidden;
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-family: var(--font-heading);
-	}
-
-	body,
-	p,
-	span,
-	a,
-	li {
-		font-family: var(--font-body);
-	}
 }
 
-.agents,
-.works {
-	margin: 5rem 2rem;
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	color: var(--textColor);
 }
 
-.agents-intro,
-.services-intro,
-.works-intro {
+p, span, a, li {
+	font-family: var(--font-body);
+	line-height: 1.6;
+	color: var(--secondaryTextColor);
+}
+
+/* Section Spacing */
+.agents, .works, .ads-container, .homeSection {
+	margin: 4rem 2rem;
+}
+
+/* Intros */
+.agents-intro, .services-intro, .works-intro {
 	width: 40%;
 	padding: 2rem 0;
 }
 
-.agents-text,
-.services-text,
-.works-text {
-	line-height: 1.5rem;
-	letter-spacing: 1px;
+/* Headings */
+.agents-heading, .services-heading, .works-heading {
+	font-size: 2.5rem;
+	font-weight: 600;
+	padding-bottom: 1.5rem;
+	color: var(--textColor);
 }
 
-.agents-heading,
-.services-heading,
-.works-heading {
-	font-size: 3rem;
-	font-weight: 500;
-	padding-bottom: 2rem;
+/* Text Blocks */
+.agents-text, .services-text, .works-text, .text {
+	line-height: 1.6;
+	font-size: 1rem;
+	color: var(--secondaryTextColor);
 }
 
+/* Cards */
 .works-cards {
 	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
 }
 
 .works-cards .card {
 	position: relative;
-	z-index: 1000;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	box-shadow: var(--mainShadow);
-	margin: 0 1rem;
-	padding: 1rem;
-	height: 500px;
+	margin: 1rem 0;
+	padding: 2rem;
+	width: 100%;
+	max-width: 400px;
+	height: 480px;
+	border-radius: 10px;
+	background: #fff;
+	transition: var(--mainTransition);
 }
 
 .works-cards .card:hover {
 	background: var(--primaryColor);
-	transition: var(--mainTransition);
+	color: #fff;
 	cursor: pointer;
 }
 
 .works-cards .card h1 {
-	position: relative;
-	font-size: 7rem;
-	z-index: -1000;
-	top: -6rem;
-	left: -3rem;
+	font-size: 5rem;
+	position: absolute;
+	top: -2rem;
+	left: -2rem;
+	opacity: 0.1;
+	z-index: 0;
 }
 
-.instructions {
-	margin-top: -10rem;
-	font-size: 2rem;
-	font-weight: 500;
-}
-
-.work-text {
-	margin-top: -2rem;
-	text-align: center;
-	line-height: 25px;
-}
-
-.works-cards a {
-	color: var(--textColor);
-}
-
-.homeSection {
-	margin: 10vh 2vw;
-}
-
-.carousel h1 span {
-	color: #6200ea;
-}
-
-.ads-container {
-	margin: 4rem 4rem;
-}
-
+/* Apartment / Advert */
 .advert {
 	display: flex;
 	align-items: center;
 	width: 100%;
 	margin: 2rem 0;
-	height: 500px;
+	height: auto;
+	gap: 2rem;
+	flex-wrap: wrap;
 }
 
 .advert:nth-child(2n) {
-	display: flex;
 	flex-direction: row-reverse;
 	text-align: right;
 }
 
-.advert:nth-child(2n) .text,
-.advert:nth-child(2n) .advertTitle {
-	padding-right: 4rem;
-}
-
 .adImage {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	width: 50%;
-	height: 400px;
-}
-
-.advert-details {
-	width: 50%;
+	min-width: 300px;
 }
 
 .adImage img {
-	padding-right: 4rem;
 	width: 100%;
-	height: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.advert-details {
+	width: 45%;
 }
 
 .apartment-location {
 	position: relative;
-	bottom: 3rem;
 	text-align: center;
 	background: var(--primaryColor);
-	width: 300px;
-	padding: 2rem;
-	font-size: 1.5rem;
+	color: white;
+	width: max-content;
+	margin: 2rem auto 0 auto;
+	padding: 1rem 2rem;
+	border-radius: 5px;
+	font-size: 1.2rem;
 }
 
 .apartment-location i {
-	color: #fff;
-	font-size: 2rem;
-	padding-right: 1.2rem;
+	margin-right: 1rem;
+	font-size: 1.5rem;
 }
 
 .advertTitle {
-	font-size: 2.5rem;
-	margin: -4rem 0 3rem 0;
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
 }
 
-.text {
-	line-height: 25px;
-}
-
-/* END ADVERTISEMENTS STYLING */
-
+/* Search Bar */
 .search-bar button {
-	background: rgba(171, 188, 227, 0.311);
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	border: 1px solid white;
-	padding: 15px 40px;
-	border-radius: 10px;
+	background: rgba(245, 129, 32, 0.08);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(4px);
+	border: 1px solid #ddd;
+	padding: 12px 30px;
+	border-radius: 8px;
 	transition: all 0.3s ease-in-out;
 }
 
-@media only screen and (max-width: 1200px) {
-
-
-	.cta p {
-		font-size: 3rem;
-	}
-
-	/* apartment responsive design */
-	.main-apartment {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	.apartment-footer {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-	}
-
-	.apartment-btn {
-		margin: 0;
-	}
-
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
 	.works-cards {
-		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
-
-	.works-cards .card {
-		margin: 2rem 0;
-		width: 500px;
-	}
-
-	.works-intro {
+	.works-intro, .services-intro {
 		width: 100%;
 		text-align: center;
 	}
-
-	.services-intro {
-		margin-bottom: 4rem;
-	}
-
-	.agents-container {
-		display: flex;
+	.advert {
 		flex-direction: column;
-		align-items: center;
 	}
-
-	.checkoutBtn {
-		padding: 5px 10px;
-		text-transform: lowercase;
-	}
-
-	.logo-section {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 2rem 4rem;
+	.advert-details, .adImage {
 		width: 100%;
 	}
 }

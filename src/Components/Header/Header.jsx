@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Header.css";
 import { home_slider } from "../../img/PropertyImages/propertyImages";
 import { Typewriter } from "react-simple-typewriter";
+import {bl1, bm1} from '../../img/bannerImg.js';
 
 const Header = () => {
   const settings = {
@@ -23,7 +24,10 @@ const Header = () => {
 
   return (
     <Container fluid className="header-container">
-      <Row className="align-items-center">
+      <Row className="banner-container"> 
+        <img src={bl1} alt="" />
+      </Row>
+      {/* <Row className="align-items-center">
         <Col lg={6} md={6} sm={12} className="text-container">
           <h1>Search for Your Dream Properties...
           </h1>
@@ -58,7 +62,7 @@ const Header = () => {
             ))}
           </Slider>
         </Col>
-      </Row>
+      </Row> */}
     </Container>
   );
 };

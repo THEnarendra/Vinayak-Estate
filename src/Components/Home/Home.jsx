@@ -9,6 +9,11 @@ import "./Home.css";
 import { interiorImg } from "../../img/PropertyImages/propertyImages";
 import { Col, Row } from "react-bootstrap";
 import FeaturedProjects from "../FeaturedProjects/FeaturedProjects";
+import ServicesSection from "../ServicesSection/ServicesSection";
+import Testimonials from "../Testimonials/Testimonials";
+import LocationSpotlight from "../LocationSpotlight/LocationSpotlight";
+import ImagesSlider from "../ImagesSlider/ImagesSlider";
+import StatsSection from "../StatsSection/StatsSection";
 
 const Home = () => {
   const images = Object.values(interiorImg);
@@ -16,7 +21,6 @@ const Home = () => {
   return (
     <div className="homeSection">
       <Header />
-      <div className="carousel">
         {/* <h1 style={{ fontSize: "3rem" }}>
           Projects in <span>Spotlight </span>
         </h1>
@@ -26,7 +30,9 @@ const Home = () => {
 
         <BuilderSlider />
 
-        <Row className="align-items-center my-5" style={{ padding: "1.5rem", backgroundColor: "#f9f9f9" }}>
+        <ServicesSection />
+
+        {/* <Row className="align-items-center my-5" style={{ padding: "1.5rem", backgroundColor: "#f9f9f9" }}>
           <Col lg={6} md={12} className="text-center">
             <Swiper
               effect="cards"
@@ -81,9 +87,16 @@ const Home = () => {
               inspires and elevates everyday living.
             </p>
           </Col>
-        </Row>
+        </Row> */}
+
+        <ImagesSlider images={images} />
+
         <FeaturedProjects />
-      </div>
+
+        <StatsSection/>
+
+        <Testimonials/>
+        {/* <LocationSpotlight /> */}
     </div>
   );
 };

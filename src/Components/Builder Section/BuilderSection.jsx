@@ -3,26 +3,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Row, Col, Button, Container } from "react-bootstrap";
-import styled from "styled-components";
 import "./BuilderSection.css";
 import PropertyPopup from "../Popup/PropertyPopup";
-import { useNavigate } from "react-router-dom";
 import propertyData from "../../staticData/propertyData";
 
 const BuilderSection = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedBuilder, setSelectedBuilder] = useState(null);
-  const navigate = useNavigate();
 
-  const openPopup = (builder) => {
-    setSelectedBuilder(builder);
-    setIsPopupOpen(true);
-  };
-
-  const closePopup = () => {
-    setIsPopupOpen(false);
-    setSelectedBuilder(null);
-  };
+  const spotlightProperties = propertyData.VillasData.filter((villa) =>
+    villa.featureType.includes("Spotlight")
+  );
 
   const settings = {
     dots: true,
@@ -32,73 +23,101 @@ const BuilderSection = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    pauseOnHover: true,
     arrows: true,
+    adaptiveHeight: true
   };
 
-  const spotlightProperties = propertyData.VillasData.filter((villa) =>
-    villa.featureType.includes("Spotlight")
-  );
-
   return (
-    <Container fluid>
-      <Row className="builderSection-heading">
-      <h1>
-          Projects in <span>Spotlight </span>
-        </h1>
-        <p>
-          our premium projects
-        </p>
-      </Row>
-      <Slider {...settings}>
-        {spotlightProperties.map((builder) => (
-          <div key={builder.id} className="carousel-item">
-            <Container className="gradient-container">
-              <Row className="align-items-center">
-                {/* Text Content */}
-                <Col md={6} xs={12} className="text-content">
-                  <h3 className="builder-name">{builder.title}</h3>
-                  <p className="property-description">{builder.description}</p>
-                  <p className="property-location">{builder.location}</p>
-                  <div className="display-flex">
-                    <strong className="property-price">For Price: </strong>
-                    <Button
-                      variant="primary"
-                      className="contact-btn"
-                      onClick={() => openPopup(builder)}
-                    >
-                      Contact Us
-                    </Button>
+    <Container fluid className="builder-section px-lg-2 px-md-3 px-2">
+      <div className="mb-4">
+        <h2 className="section-heading-builder-slider">
+          Projects in <span>Spotlight</span>
+        </h2>
+        <p className="section-subtitle-builder">Premium properties handpicked for you</p>
+      </div>
+
+      <Slider {...settings} className="spotlight-slider">
+        {spotlightProperties.map((property) => (
+          <div key={property.id} className="px-2">
+            <div className="property-card">
+              <Row className="g-0 align-items-center px-4">
+                <Col lg={6} className="property-image-col">
+                  <div className="image-container">
+                    <img 
+                      src={property.images[0]} 
+                      alt={property.title} 
+                      className="property-image"
+                    />
+                    {property.badge && (
+                      <div className="property-badge">
+                        {property.badge}
+                      </div>
+                    )}
                   </div>
                 </Col>
-                {/* Image */}
-                <Col md={6} xs={12} className="image-container">
-                  <img
-                    src={builder.images[0]}
-                    alt={builder.title}
-                    className="property-image"
-                  />
+                <Col lg={6} className="property-details">
+                  <div className="p-2">
+                    <h3 className="property-title">{property.title}</h3>
+                    {/* <div className="property-rating mb-3">
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star-half-alt"></i>
+                      <span className="rating-text">4.5 (120 Reviews)</span>
+                    </div> */}
+                    <p className="property-description">
+                      {property.description.length > 150 
+                        ? `${property.description.substring(0, 150)}...` 
+                        : property.description}
+                    </p>
+                    <div className="property-highlights">
+                      <div className="highlight-item text-center">
+                        {/* <i className="fas fa-map-marker-alt"></i> */}
+                        <span>{property.location}</span>
+                      </div>
+                      {property.area && (
+                        <div className="highlight-item">
+                          <i className="fas fa-ruler-combined"></i>
+                          <span>{property.area} sq.ft</span>
+                        </div>
+                      )}
+                      {property.bedrooms && (
+                        <div className="highlight-item">
+                          <i className="fas fa-bed"></i>
+                          <span>{property.bedrooms} Beds</span>
+                        </div>
+                      )}
+                    </div>
+                    <div className="price-section">
+                      <div className="price-container">
+                        <span className="price-label">Starting Price</span>
+                        <span className="price-value">{property.askprice}</span>
+                      </div>
+                      <Button 
+                        variant="primary" 
+                        className="enquiry-btn"
+                        onClick={() => {
+                          setSelectedBuilder(property);
+                          setIsPopupOpen(true);
+                        }}
+                      >
+                        <i className="fas fa-phone-alt me-2"></i> Enquire Now
+                      </Button>
+                    </div>
+                  </div>
                 </Col>
               </Row>
-            </Container>
+            </div>
           </div>
         ))}
       </Slider>
 
-      {/* Popup */}
       {isPopupOpen && selectedBuilder && (
         <PropertyPopup
           isOpen={isPopupOpen}
-          onClose={closePopup}
-          image={selectedBuilder.images[0]}
-          name={selectedBuilder.title}
-          price={selectedBuilder.askprice}
-          id={selectedBuilder.id}
-          propertyType={selectedBuilder.propertyType}
-          contactInfo={{
-            phone: selectedBuilder.contactInfo.phone,
-            email: selectedBuilder.contactInfo.email,
-          }}
+          onClose={() => setIsPopupOpen(false)}
+          {...selectedBuilder}
         />
       )}
     </Container>
