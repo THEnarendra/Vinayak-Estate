@@ -19,11 +19,11 @@ export default function PropertyDetails() {
   const [showAll, setShowAll] = useState(false);
   const { id, route } = useParams();
   const apartments =
-    route === "Lands"
+    route === "lands"
       ? propertyData.LandData
-      : route === "Villas"
+      : route === "villas"
       ? propertyData.VillasData
-      : route === "Farm%20Houses"
+      : route === "farm-houses"
       ? propertyData.FarmHouseData
       : propertyData.FlatsData;
 
@@ -38,6 +38,7 @@ export default function PropertyDetails() {
     : property?.images.slice(0, 6);
   const remainingCount = property?.images.length - 6;
 
+  console.log("Property Details:", property);
   return (
     <>
     <Container className="propertyDetails-page">
