@@ -6,6 +6,14 @@ import { Helmet } from "react-helmet";
 import propertyData from "../../staticData/propertyData";
 import "./Apartments.css";
 
+const createSlug = (text) => {
+  return text?.toLowerCase()
+    .replace(/[^a-z0-9 -]/g, '')  // Remove invalid chars
+    .replace(/\s+/g, '-')         // Replace spaces with -
+    .replace(/-+/g, '-')          // Replace multiple - with single -
+    || '';
+};
+
 const NoData = ({ category }) => {
   const propertyType = {
     "lands": "Land",
@@ -31,44 +39,38 @@ const NoData = ({ category }) => {
 
 const Apartments = () => {
   const navigate = useNavigate();
-  const { id } = useParams();
+  const { type = 'flats', location = 'jaipur' } = useParams();
 
   const propertyType = {
     "lands": "Land",
     "villas": "Villa",
     "farm-houses": "Farm House",
     "flats": "Apartment"
-  }[id] || "Property";
+  }[type] || "Property";
 
-  const apartments =
-    id === "lands"
-      ? propertyData.LandData
-      : id === "villas"
-      ? propertyData.VillasData
-      : id === "farm-houses"
-      ? propertyData.FarmHouseData
-      : propertyData.FlatsData;
+  // Safely access property data
+  const propertyTypeKey = `${type.charAt(0).toUpperCase() + type.slice(1)}Data`;
+  const apartments = propertyData[propertyTypeKey] || [];
 
-  const handleNavigate = (data) => {
-    navigate(`/${id}/${data}`);
+  const handleNavigate = (property) => {
+    const slug = createSlug(property.title);
+    navigate(`/properties/${type}/${property.location.toLowerCase()}/${property.id}-${slug}`);
   };
 
   return (
     <Container fluid className="apartments-page px-lg-5 px-md-3 px-2">
       <Helmet>
-        <title>{propertyType}s for Sale in Jaipur | Vinayak Estate</title>
+        <title>{propertyType}s for Sale in {location.charAt(0).toUpperCase() + location.slice(1)} | Vinayak Estate</title>
         <meta 
           name="description" 
-          content={`Browse premium ${propertyType.toLowerCase()} listings in Jaipur. Find your dream property with verified details and best prices.`} 
+          content={`Browse premium ${propertyType.toLowerCase()} listings in ${location}. Find your dream property with verified details and best prices.`} 
         />
-        <meta property="og:title" content={`${propertyType}s in Jaipur | Vinayak Estate`} />
-        <meta property="og:type" content="website" />
       </Helmet>
 
       <Row className="mb-5">
         <Col xs={12}>
           <h1 className="page-title">
-            {propertyType}s in <span className="text-primary">Jaipur</span>
+            {propertyType}s in <span className="text-primary">{location.charAt(0).toUpperCase() + location.slice(1)}</span>
           </h1>
           <p className="page-subtitle">
             Showing {apartments.length} {apartments.length === 1 ? 'property' : 'properties'}
@@ -77,21 +79,21 @@ const Apartments = () => {
       </Row>
 
       {apartments.length === 0 ? (
-        <NoData category={id} />
+        <NoData category={type} />
       ) : (
         <Row className="g-4">
           {apartments.map((apartment) => (
             <Col key={apartment.id} xl={6} className="mb-4">
               <Card 
                 className="property-card h-100" 
-                onClick={() => handleNavigate(apartment.id)}
+                onClick={() => handleNavigate(apartment)}
                 itemScope
                 itemType="http://schema.org/Product"
               >
                 <Row className="g-0 h-100">
-                  <Col md={5} className="property-image-container">
+                  <Col md={5} className="property-image-container-apartments">
                     <div 
-                      className="property-image"
+                      className="property-image-apartments"
                       style={{
                         backgroundImage: `url(${apartment.images?.[0] || ''})`
                       }}
@@ -104,8 +106,8 @@ const Apartments = () => {
                     </div>
                   </Col>
                   <Col md={7}>
-                    <Card.Body className="property-details">
-                      <Card.Title className="property-title" itemProp="name">
+                    <Card.Body className="property-details-apartments">
+                      <Card.Title className="property-title-apartments" itemProp="name">
                         {apartment.title}
                       </Card.Title>
                       
@@ -126,10 +128,9 @@ const Apartments = () => {
                       
                       <div className="d-flex justify-content-between align-items-center mt-4">
                         <div className="price-tag" itemProp="offers" itemScope itemType="http://schema.org/Offer">
-                          {/* <span className="text-muted">Starting from</span> */}
-                          {/* <div className="price" itemProp="price">
-                            ₹{apartment.price}
-                          </div> */}
+                          <div className="price" itemProp="price">
+                            {apartment.price && `₹${apartment.price}`}
+                          </div>
                         </div>
                         <Button variant="outline-primary" className="view-details-btn">
                           View Details <FiArrowRight className="ms-2" />

@@ -1,69 +1,62 @@
 import React from "react";
-import Slider from "react-slick";
 import { Container, Row, Col } from "react-bootstrap";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./Header.css";
-import { home_slider } from "../../img/PropertyImages/propertyImages";
 import { Typewriter } from "react-simple-typewriter";
-import {bl1, bm1} from '../../img/bannerImg.js';
+import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: false,
-  };
-
-  const sliderImages = Object.values(home_slider);
-
   return (
-    <Container fluid className="header-container">
-      <Row className="banner-container"> 
-        <img src={bl1} alt="" />
-      </Row>
-      {/* <Row className="align-items-center">
-        <Col lg={6} md={6} sm={12} className="text-container">
-          <h1>Search for Your Dream Properties...
-          </h1>
-          <p>
-            Discover the most luxurious{" "}
-            <span className="typing-effect">
-              <Typewriter
-                words={["Villas", "Farm Houses", "Flats"]}
-                loop={true}
-                cursor
-                cursorStyle="|"
-                typeSpeed={100}
-                deleteSpeed={70}
-                delaySpeed={1500}
-              />
-            </span>{" "}
-            <br/>
-            designed to meet all your expectations. Explore unmatched comfort
-            and elegance.
-            From modern designs to timeless architecture, our properties are
-            crafted to perfection. Experience a lifestyle that blends luxury
-            with convenience, tailored just for you.
-          </p>
-        </Col>
-
-        <Col lg={6} md={6} sm={12} className="slider-container">
-          <Slider {...settings}>
-            {sliderImages.map((image, index) => (
-              <div key={index} className="slider-image">
-                <img src={image} alt={`Slide ${index + 1}`} />
+    <header className="real-estate-header">
+      <Container>
+        <Row className="align-items-center">
+          <Col lg={6} md={12} className="header-content">
+            <div className="header-text">
+              <h1>
+                Find Your Perfect <span className="highlight">Property</span>
+              </h1>
+              <div className="typewriter-container">
+                <p>
+                  Discover luxury{" "}
+                  <span className="typing-effect">
+                    <Typewriter
+                      words={["Villas", "Apartments", "Farm Houses", "Lands"]}
+                      loop={true}
+                      cursor
+                      cursorStyle="|"
+                      typeSpeed={70}
+                      deleteSpeed={50}
+                      delaySpeed={2000}
+                    />
+                  </span>
+                </p>
               </div>
-            ))}
-          </Slider>
-        </Col>
-      </Row> */}
-    </Container>
+              <p className="header-description">
+                Experience premium living with our curated selection of properties 
+                designed for your comfort and lifestyle.
+              </p>
+              <div className="cta-buttons">
+                <button className="primary-btn" onClick={() => {
+                        const element = document.getElementById('featured-projects');
+                        if (element) {
+                        element.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                      });} }}
+                >Browse Listings</button>
+                <Link to='/contact'><button className="secondary-btn">Get Consultation</button></Link>        
+              </div>
+            </div>
+          </Col>  
+          <Col lg={6} md={12} className="header-visual">
+            <div className="property-card-grid">
+              <div className="card-item card-main"></div>
+              <div className="card-item card-secondary"></div>
+              <div className="card-item card-tertiary"></div>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </header>
   );
 };
 

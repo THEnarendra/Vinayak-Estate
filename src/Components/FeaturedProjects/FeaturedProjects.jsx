@@ -18,25 +18,29 @@ const FeaturedProjects = () => {
       title: "Lands",
       description: "Land available for immediate use",
       image: land,
-      type: "lands"
+      type: "lands",
+      location: "jaipur" // Default location
     },
     {
       title: "Villas",
       description: "Redefining community living Villas",
       image: villa,
-      type: "villas"
+      type: "villas",
+      location: "jaipur"
     },
     {
       title: "Farm Houses",
       description: "Premium housing for the lifestyle-conscious",
       image: farmHouse,
-      type: "farm-houses"
+      type: "farm-houses",
+      location: "jaipur"
     },
     {
       title: "Flats",
       description: "Experience serene beachside living",
       image: flats,
-      type: "flats"
+      type: "flats",
+      location: "jaipur"
     },
   ];
 
@@ -64,13 +68,13 @@ const FeaturedProjects = () => {
     ]
   };
 
-  const handleCardClick = (type) => {
-    navigate(`/${type.toLowerCase().replace(' ', '-')}`);
+  const handleCardClick = (collection) => {
+    navigate(`/properties/${collection.type}/${collection.location}`);
   };
 
   return (
-    <Container fluid className="featured-projects">
-      <Row className=" mb-5">
+    <Container fluid className="featured-projects" id="featured-projects">
+      <Row className="mb-5">
         <Col xs={12}>
           <h2 className="section-heading-featured-projects">
             Our <span>Collections</span>
@@ -88,7 +92,7 @@ const FeaturedProjects = () => {
                   <Col xs={11} sm={10} md={9} lg={11} xl={10}>
                     <div 
                       className="project-card"
-                      onClick={() => handleCardClick(collection.type)}
+                      onClick={() => handleCardClick(collection)}
                     >
                       <div className="project-image" style={{ backgroundImage: `url(${collection.image})` }}>
                         <div className="project-overlay"></div>

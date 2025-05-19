@@ -57,7 +57,7 @@ const BuilderSection = () => {
                 </Col>
                 <Col lg={6} className="property-details">
                   <div className="p-2">
-                    <h3 className="property-title">{property.title}</h3>
+                    <h3 className="property-title-builder">{property.title}</h3>
                     {/* <div className="property-rating mb-3">
                       <i className="fas fa-star"></i>
                       <i className="fas fa-star"></i>
@@ -89,7 +89,7 @@ const BuilderSection = () => {
                         </div>
                       )}
                     </div>
-                    <div className="price-section">
+                    <div className="price-section-builder">
                       <div className="price-container">
                         <span className="price-label">Starting Price</span>
                         <span className="price-value">{property.askprice}</span>
