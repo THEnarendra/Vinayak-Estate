@@ -33,10 +33,11 @@
   transform-origin: center center;
   will-change: transform, box-shadow; 
   border-radius: 15px;
+  padding: 1rem;
 }
 
 .spotlight-slider:hover {
-  transform: scale(1.02);
+  transform: scale(1.002);
 }
 .property-card {
   background: linear-gradient(to right, #e3ddff7c, #f8daff4f);
@@ -102,11 +103,24 @@
   font-size: 0.9rem;
 }
 
-.property-description {
-  font-size: .8rem;
-  color: var(--secondaryTextColor);
-  /* line-height: 1.7; */
-  margin-bottom: 1rem;
+.property-description-builder {
+  line-height: 1.6;
+  color: var(--textColor);
+  font-size: .9rem;
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--primaryColor);
+  color: gray;
+}
+
+.property-description-builder::first-letter {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primaryColor);
+  line-height: 1;
+  float: left;
+  margin-right: 8px;
+  margin-top: 0.3rem;
 }
 
 .property-highlights {
@@ -152,13 +166,14 @@
 }
 
 .price-value {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--textColor);
   font-family: var(--font-heading);
 }
 
-.enquiry-btn {
+.enquiry-btn-builder {
+  font-size: 1,25rem;
   background-color: var(--primaryColor);
   color: white;
   border: none;
@@ -171,7 +186,7 @@
   align-items: center;
 }
 
-.enquiry-btn:hover {
+.enquiry-btn-builder:hover {
   background-color: #4500b5;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(98, 0, 234, 0.2);
@@ -271,7 +286,7 @@
   font-size: 1.1rem;
 }
 
-.enquiry-btn {
+.enquiry-btn-builder {
   font-size: 0.75rem;
   padding: 0.6rem 1.25rem;
 }

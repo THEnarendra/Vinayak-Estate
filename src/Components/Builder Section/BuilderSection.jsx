@@ -66,7 +66,7 @@ const BuilderSection = () => {
                       <i className="fas fa-star-half-alt"></i>
                       <span className="rating-text">4.5 (120 Reviews)</span>
                     </div> */}
-                    <p className="property-description">
+                    <p className="property-description-builder">
                       {property.description.length > 150 
                         ? `${property.description.substring(0, 150)}...` 
                         : property.description}
@@ -91,12 +91,12 @@ const BuilderSection = () => {
                     </div>
                     <div className="price-section-builder">
                       <div className="price-container">
-                        <span className="price-label">Starting Price</span>
+                        {/* <span className="price-label">Starting Price</span> */}
                         <span className="price-value">{property.askprice}</span>
                       </div>
                       <Button 
                         variant="primary" 
-                        className="enquiry-btn"
+                        className="enquiry-btn-builder"
                         onClick={() => {
                           setSelectedBuilder(property);
                           setIsPopupOpen(true);

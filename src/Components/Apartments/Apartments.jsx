@@ -69,10 +69,10 @@ const Apartments = () => {
 
       <Row className="mb-5">
         <Col xs={12}>
-          <h1 className="page-title">
+          <h1 className="page-title-apartments">
             {propertyType}s in <span className="text-primary">{location.charAt(0).toUpperCase() + location.slice(1)}</span>
           </h1>
-          <p className="page-subtitle">
+          <p className="page-subtitle-apartments">
             Showing {apartments.length} {apartments.length === 1 ? 'property' : 'properties'}
           </p>
         </Col>
@@ -122,8 +122,8 @@ const Apartments = () => {
                         </div>
                       </div>
                       
-                      <div className="property-description" itemProp="description">
-                        {apartment.description.substring(0, 120)}...
+                      <div className="property-description-apartments" itemProp="description">
+                        {apartment.description.substring(0, 100)}...
                       </div>
                       
                       <div className="d-flex justify-content-between align-items-center mt-4">
