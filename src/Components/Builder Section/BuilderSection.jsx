@@ -55,7 +55,7 @@ const BuilderSection = () => {
                     )}
                   </div>
                 </Col>
-                <Col lg={6} className="property-details">
+                <Col lg={6} className="property-details-builder">
                   <div className="p-2">
                     <h3 className="property-title-builder">{property.title}</h3>
                     {/* <div className="property-rating mb-3">

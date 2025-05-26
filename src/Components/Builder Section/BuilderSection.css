@@ -75,7 +75,7 @@
   font-weight: 600;
 }
 
-.property-details {
+.property-details-builder {
   padding: 2rem;
 }
 
@@ -166,6 +166,7 @@
 }
 
 .price-value {
+  margin-bottom: .5rem;
   font-size: 1rem;
   font-weight: 700;
   color: var(--textColor);
@@ -209,7 +210,7 @@
     height: 300px;
   }
   
-  .property-details {
+  .property-details-builder {
     padding: 1.5rem;
   }
 }
@@ -249,7 +250,7 @@
   margin-top: -0.5rem;
 }
 
-.property-details {
+.property-details-builder {
   padding: 0rem;
 }
 

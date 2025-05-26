@@ -59,8 +59,7 @@ const Header = () => {
           </Col>  
           <Col lg={6} md={12} className="header-visual">
             <div className="property-stats-container">
-              {/* Featured Property Card */}
-              <div className="featured-property-card">
+              {/* <div className="featured-property-card">
                 <div className="property-badge">Featured</div>
                 <div className="property-info">
                   <h3>Luxury Waterfront Villa</h3>
@@ -73,7 +72,7 @@ const Header = () => {
                     <FiMapPin /> Villas and Flats in Jaipur
                   </div>
                 </div>
-              </div>
+              </div> */}
               
               {/* Stats Grid */}
               <div className="stats-grid">

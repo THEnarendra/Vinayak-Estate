@@ -10,7 +10,7 @@
 
 .real-estate-header {
   background-color: #f9f9ff;
-  padding: 1rem 0;
+  /* padding: .5rem 0; */
   position: relative;
   overflow: hidden;
 }
@@ -65,7 +65,7 @@
 
 .typewriter-container {
   min-height: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
 }
 
 .typing-effect {
@@ -89,7 +89,7 @@
 }
 
 .primary-btn, .secondary-btn {
-  padding: 0.8rem 1.8rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 6px;
   font-weight: 600;
   text-transform: uppercase;
@@ -310,7 +310,7 @@
   }
   
   .header-visual {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   
   .stats-grid {
