@@ -23,7 +23,7 @@ const About = () => {
           </p>
         </Col>
 
-        <Col lg={6} md={12} className="stats-section mt-4 mt-lg-0">
+        <Col lg={6} md={12} className="stats-section mb-0 mt-0 mt-lg-0">
           <Row className="g-3">
             <Col md={6} sm={6} xs={6}>
               <div className="stat-card">

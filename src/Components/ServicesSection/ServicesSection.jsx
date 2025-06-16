@@ -62,7 +62,7 @@ const sliderSettings = {
             lg={3}
             className="d-flex justify-content-center"
           >
-            <div className="gradient-container service-card">
+            <div className="gradient-container service-card-services">
               <div className="service-icon">{service.icon}</div>
               <h3 className="service-name">{service.title}</h3>
               <p className="service-description">{service.description}</p>
@@ -76,7 +76,7 @@ const sliderSettings = {
         <Slider {...sliderSettings}>
           {services.map((service, index) => (
             <div key={index} className="px-1"> {/* Small horizontal padding */}
-              <div className="gradient-container service-card">
+              <div className="gradient-container service-card-services">
                 <div className="service-icon">{service.icon}</div>
                 <h3 className="service-name">{service.title}</h3>
                 <p className="service-description">{service.description}</p>

@@ -166,13 +166,18 @@
 
 @media (max-width: 576px) {
   .about-page {
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
   
-  .about-section, 
-  .design-section {
+  .about-section{
     padding: 1.5rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
+  }
+
+  .design-section {
+    padding: 0;
+    margin: 0;
+    margin-top: 0;
   }
   
   .section-heading-about {
@@ -182,8 +187,18 @@
   .stat-card {
     padding: 1.5rem 0.5rem;
   }
+
+  .stats-section {
+    padding: 0;
+    margin: 0;
+  } 
   
   .service-card img {
     height: 200px;
+  }
+
+  .company-info {
+    margin-bottom: 0;
+    padding: 0;
   }
 }

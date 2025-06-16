@@ -126,7 +126,7 @@
 /* Enhanced Right Visual Section */
 .header-visual {
   position: relative;
-  padding: 2rem;
+  padding: 1rem;
   z-index: 1;
 }
 
@@ -274,7 +274,7 @@
 
 @media (max-width: 992px) {
   .real-estate-header {
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
   
   .header-text h1 {
@@ -284,7 +284,7 @@
 
 @media (max-width: 768px) {
   .real-estate-header {
-    padding: 2.5rem 0;
+    padding: 1rem 0;
     text-align: center;
   }
   
